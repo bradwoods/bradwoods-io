@@ -1,11 +1,20 @@
+@font-face {
+    font-family: "Orbitron";
+    font-display: "swap";
+    font-weight: 400 900;
+    src: url("/fonts/Orbitron-VariableFont_wght.ttf");
+}
+
 :root {
-    --color-text-default: #ffffff;
+    --color-text-default: #bfbfbf;
+    --color-text-heading: #fff;
     --color-text-cta: #e3a23a;
-    --gradient-background: radial-gradient(
+    --color-background: #1f2023;
+    /* --gradient-background: radial-gradient(
         ellipse at center,
         #272829 0%,
         #101011 100%
-    );
+    ); */
 }
 
 *,
@@ -38,7 +47,9 @@ body {
     font-size: 14px;
 
     color: var(--color-text-default);
-    background: var(--gradient-background);
+    background: var(--color-background);
+
+    font-family: "Orbitron", sans-serif;
 }
 
 img,
@@ -50,7 +61,14 @@ iframe {
     display: block;
 }
 
-h1,
+h1 {
+    font-size: 18px;
+    font-variation-settings: "wght" 700;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+    color: var(--color-text-heading);
+}
+
 h2,
 h3,
 h4,
@@ -58,7 +76,8 @@ h5,
 h6,
 p,
 strong {
-    font-weight: 400;
+    font-size: 14px;
+    font-variation-settings: "wght" 400;
     overflow-wrap: break-word;
 }
 

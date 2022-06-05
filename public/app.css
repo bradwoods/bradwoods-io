@@ -1,3 +1,13 @@
+:root {
+    --color-text-default: #ffffff;
+    --color-text-cta: #e3a23a;
+    --gradient-background: radial-gradient(
+        ellipse at center,
+        #272829 0%,
+        #101011 100%
+    );
+}
+
 *,
 *::before,
 *::after {
@@ -23,6 +33,12 @@ body {
 body {
     -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;
+
+    font-family: monospace;
+    font-size: 14px;
+
+    color: var(--color-text-default);
+    background: var(--gradient-background);
 }
 
 img,
@@ -47,6 +63,7 @@ strong {
 }
 
 a {
+    color: var(--color-text-default);
     text-decoration: underline;
 }
 
@@ -57,4 +74,8 @@ ol {
 
 input {
     border: none;
+}
+
+a.cta {
+    color: var(--color-text-cta);
 }

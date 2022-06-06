@@ -149,10 +149,6 @@ img {
     object-fit: contain;
 }
 
-img.doom {
-    filter: grayscale(1);
-}
-
 img.matrix {
     filter: grayscale(1);
     object-fit: cover;
@@ -163,8 +159,42 @@ img.johnnyCab {
     transform: scaleX(-1);
 }
 
+img.doom {
+    filter: grayscale(1);
+}
+
 video {
     filter: grayscale(1);
+}
+
+/* projects ------------------------------------------------------ */
+div.projectsLayout {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+div.projectsLayout > main {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.projectsLayout > svg {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.projectsLayout > svg path {
+    stroke: var(--color-border);
 }
 
 /* footer ---------------------------------------------------- */

@@ -61,6 +61,20 @@ body {
     overscroll-behavior: none;
 }
 
+@media (max-width: 660px) {
+    body {
+        grid-template-columns: repeat(2, var(--px-grid-square));
+        grid-template-rows: repeat(6, var(--px-grid-square));
+    }
+}
+
+@media (max-width: 440px) {
+    body {
+        grid-template-columns: repeat(1, var(--px-grid-square));
+        grid-template-rows: repeat(9, var(--px-grid-square));
+    }
+}
+
 /* text ------------------------------------------ */
 /* https://seek-oss.github.io/capsize/ */
 .textLarge {

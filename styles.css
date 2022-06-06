@@ -168,12 +168,49 @@ img.johnnyCab {
     transform: scaleX(-1);
 }
 
-img.doom {
+video {
     filter: grayscale(1);
 }
 
-video {
+/* doom ------------------------------------------------------ */
+div.doomLayout {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+@keyframes doom {
+    0%,
+    33% {
+        opacity: 1;
+    }
+    34%,
+    100% {
+        opacity: 0;
+    }
+}
+
+div.doomLayout > img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
     filter: grayscale(1);
+    opacity: 0;
+
+    animation: doom 3s infinite;
+}
+
+div.doomLayout > img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+div.doomLayout > img:nth-child(3) {
+    animation-delay: 2s;
 }
 
 /* matrix ------------------------------------------------------ */

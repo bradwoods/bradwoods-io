@@ -1,14 +1,14 @@
 {
-  "name": "bradwoods-io",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "http-server -o"
-  },
-  "author": "brad@bradwoods.io",
-  "license": "ISC",
-  "dependencies": {
-    "http-server": "^14.1.1",
-    "prettier": "^2.6.2"
-  }
+    "name": "bradwoods-io",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "dev": "http-server ./docs -o"
+    },
+    "author": "brad@bradwoods.io",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^14.1.1",
+        "prettier": "^2.6.2"
+    }
 }

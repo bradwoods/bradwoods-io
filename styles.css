@@ -163,13 +163,48 @@ img {
     object-fit: contain;
 }
 
-img.johnnyCab {
+video {
     filter: grayscale(1);
+}
+
+/* johnnyCab ------------------------------------------------------ */
+@keyframes johnnyCab {
+    0%,
+    50% {
+        opacity: 1;
+    }
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+div.johnnyCabLayout {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+div.johnnyCabLayout img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
     transform: scaleX(-1);
 }
 
-video {
-    filter: grayscale(1);
+div.johnnyCabLayout img:nth-child(2),
+div.johnnyCabLayout img:nth-child(3) {
+    opacity: 0;
+    animation: johnnyCab 2s infinite;
+}
+
+div.johnnyCabLayout img:nth-child(3) {
+    animation-delay: 1s;
 }
 
 /* doom ------------------------------------------------------ */

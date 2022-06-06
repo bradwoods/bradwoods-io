@@ -163,11 +163,6 @@ img {
     object-fit: contain;
 }
 
-img.matrix {
-    filter: grayscale(1);
-    object-fit: cover;
-}
-
 img.johnnyCab {
     filter: grayscale(1);
     transform: scaleX(-1);
@@ -179,6 +174,12 @@ img.doom {
 
 video {
     filter: grayscale(1);
+}
+
+/* matrix ------------------------------------------------------ */
+div.matrixLayout {
+    width: 100%;
+    height: 100%;
 }
 
 /* projects ------------------------------------------------------ */

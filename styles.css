@@ -248,6 +248,8 @@ main.projects svg {
     position: absolute;
     top: 0;
     left: 0;
+
+    pointer-events: none;
 }
 
 main.projects svg path {

@@ -103,12 +103,6 @@ body {
     display: table;
 }
 
-a {
-    color: var(--color-text-default);
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 /* header ---------------------------------------------------- */
 header {
     width: 100%;
@@ -142,13 +136,8 @@ main.projects ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--px-gap-med);
 
     list-style: none;
-}
-
-main.projects li:first-child a {
-    color: var(--color-cta);
 }
 
 /* img ---------------------------------------------------- */
@@ -193,7 +182,33 @@ footer ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--px-gap-med);
 
     list-style: none;
+}
+
+/* clickables ---------------------------------------------------- */
+li {
+    display: flex;
+}
+
+a {
+    width: 100%;
+    padding: 6px 0;
+
+    color: var(--color-text-default);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a.cta {
+    color: var(--color-cta);
+}
+
+a:hover {
+    background: var(--color-cta);
+    color: var(--color-background);
+}
+
+a:focus {
+    outline: 1px solid var(--color-cta);
 }

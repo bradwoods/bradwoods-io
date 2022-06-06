@@ -184,6 +184,10 @@ div.projectsLayout > main {
     left: 0;
 }
 
+div.projectsLayout main h1 {
+    color: var(--color-text-heading);
+}
+
 div.projectsLayout > svg {
     width: 100%;
     height: 100%;

@@ -12,6 +12,7 @@
 
     --color-text-default: #bfbfbf;
     --color-text-heading: #fff;
+    --color-text-overlay: #fff;
     --color-cta: #e3a23a;
     --color-background: #101011;
     --color-border: #fff;
@@ -225,6 +226,26 @@ section.doom > img:nth-child(2) {
 
 section.doom > img:nth-child(3) {
     animation-delay: 2s;
+}
+
+section.doom svg {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+}
+
+section.doom svg text {
+    font-variation-settings: "wght" 700;
+    font-size: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    fill: var(--color-text-overlay);
 }
 
 /* matrix ------------------------------------------------------ */

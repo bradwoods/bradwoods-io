@@ -44,38 +44,6 @@ html {
     height: 100%;
 }
 
-body {
-    width: 100%;
-    min-height: 100%;
-
-    display: grid;
-    grid-template-rows: repeat(3, var(--px-grid-square));
-    grid-template-columns: repeat(3, var(--px-grid-square));
-    justify-content: center;
-    align-content: center;
-
-    font-family: "Orbitron", sans-serif;
-    /* background: var(--color-background); */
-    background: var(--gradient-background);
-
-    -webkit-font-smoothing: antialiased;
-    overscroll-behavior: none;
-}
-
-@media (max-width: 660px) {
-    body {
-        grid-template-columns: repeat(2, var(--px-grid-square));
-        grid-template-rows: repeat(6, var(--px-grid-square));
-    }
-}
-
-@media (max-width: 440px) {
-    body {
-        grid-template-columns: repeat(1, var(--px-grid-square));
-        grid-template-rows: repeat(9, var(--px-grid-square));
-    }
-}
-
 /* text ------------------------------------------ */
 /* https://seek-oss.github.io/capsize/ */
 .textLarge {
@@ -129,6 +97,39 @@ img {
 
 video {
     filter: grayscale(1);
+}
+
+/* grid --------------------------------------------- */
+body {
+    width: 100%;
+    min-height: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(3, var(--px-grid-square));
+    grid-template-columns: repeat(3, var(--px-grid-square));
+    justify-content: center;
+    align-content: center;
+
+    font-family: "Orbitron", sans-serif;
+    /* background: var(--color-background); */
+    background: var(--gradient-background);
+
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+}
+
+@media (max-width: 660px) {
+    body {
+        grid-template-columns: repeat(2, var(--px-grid-square));
+        grid-template-rows: repeat(6, var(--px-grid-square));
+    }
+}
+
+@media (max-width: 440px) {
+    body {
+        grid-template-columns: repeat(1, var(--px-grid-square));
+        grid-template-rows: repeat(9, var(--px-grid-square));
+    }
 }
 
 /* header ---------------------------------------------------- */

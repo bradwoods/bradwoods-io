@@ -3,7 +3,7 @@ const CHAR_COUNT = 17;
 const COL_COUNT = 8;
 
 const speedMS = {
-    max: 28,
+    max: 34,
     min: 200,
 };
 const delayMS = {

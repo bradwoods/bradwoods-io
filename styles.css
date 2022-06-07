@@ -8,7 +8,7 @@
 :root {
     --px-grid-square: 220px;
     --px-gap-large: 24px;
-    --px-gap-med: 12px;
+    --px-gap-small: 12px;
 
     --color-text-default: #bfbfbf;
     --color-text-heading: #fff;
@@ -118,22 +118,6 @@ body {
     display: table;
 }
 
-/* header ---------------------------------------------------- */
-header {
-    width: 100%;
-    height: 100%;
-    padding: var(--px-gap-med);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: var(--px-gap-large);
-
-    color: var(--color-background);
-    background: var(--color-cta);
-}
-
 /* img / video ---------------------------------------------------- */
 img {
     width: 100%;
@@ -145,6 +129,22 @@ img {
 
 video {
     filter: grayscale(1);
+}
+
+/* header ---------------------------------------------------- */
+header {
+    width: 100%;
+    height: 100%;
+    padding: var(--px-gap-small);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--px-gap-small);
+
+    color: var(--color-background);
+    background: var(--color-cta);
 }
 
 /* johnnyCab ------------------------------------------------------ */
@@ -249,9 +249,27 @@ section.doom svg text {
 }
 
 /* matrix ------------------------------------------------------ */
-section.matrixLayout {
+section.matrix {
     width: 100%;
     height: 100%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+section.matrix .col {
+    height: 100%;
+
+    position: absolute;
+    top: -4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section.matrix .col span {
+    color: var(--color-text-default);
+    line-height: 1.1;
 }
 
 /* projects ---------------------------------------------------- */
@@ -310,7 +328,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--px-gap-med);
+    gap: var(--px-gap-small);
 
     color: var(--color-text-default);
     border: 1px solid var(--color-border);

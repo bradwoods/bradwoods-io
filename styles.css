@@ -136,11 +136,9 @@ body {
 }
 
 @media (max-width: 440px) {
-    video.mtv {
-        display: unset;
-    }
-
     body {
+        padding: calc((100% - 220px) / 2) 0;
+
         display: grid;
         grid:
             "header" var(--px-square)
@@ -153,6 +151,10 @@ body {
             "johnnyCab" var(--px-square)
             "footer" var(--px-square)
             / var(--px-square);
+    }
+
+    video.mtv {
+        display: unset;
     }
 }
 

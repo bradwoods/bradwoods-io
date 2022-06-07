@@ -87,6 +87,15 @@ html {
     display: table;
 }
 
+svg.defs {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+
+    pointer-events: none;
+}
+
 /* grid --------------------------------------------- */
 body {
     width: 100%;
@@ -163,6 +172,7 @@ header {
 
     color: var(--color-background);
     background: var(--color-cta);
+    filter: url(#distressFilter);
 }
 
 /* beBop ------------------------------------------------------ */

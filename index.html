@@ -46,6 +46,20 @@
         />
     </head>
     <body>
+        <svg class="defs" aria-hidden="true">
+            <filter id="distressFilter">
+                <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency=".5"
+                    numOctaves="1"
+                />
+                <feComponentTransfer>
+                    <feFuncA type="linear" slope="84" intercept="-20" />
+                </feComponentTransfer>
+                <feComposite in="SourceGraphic" operator="in" />
+            </filter>
+        </svg>
+
         <header>
             <h1 class="textLarge">Brad Woods</h1>
             <p class="textMed">Front-end engineer</p>

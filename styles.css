@@ -6,8 +6,9 @@
 }
 
 :root {
-    --px-grid-square: 220px;
-    --px-gap-large: 24px;
+    --px-square: 220px;
+    --px-gap-large: 64px;
+    --px-gap-med: 24px;
     --px-gap-small: 12px;
 
     --color-text-default: #bfbfbf;
@@ -86,32 +87,23 @@ html {
     display: table;
 }
 
-/* img / video ---------------------------------------------------- */
-img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-    object-fit: contain;
-}
-
-video {
-    filter: grayscale(1);
-}
-
 /* grid --------------------------------------------- */
 body {
     width: 100%;
     min-height: 100%;
+    padding: var(--px-gap-large, 0);
 
     display: grid;
-    grid-template-rows: repeat(3, var(--px-grid-square));
-    grid-template-columns: repeat(3, var(--px-grid-square));
+    grid:
+        "header prince beBop" var(--px-square)
+        "doom projects matrix" var(--px-square)
+        "mtv johnnyCab footer" var(--px-square)
+        / var(--px-square) var(--px-square) var(--px-square);
+
     justify-content: center;
     align-content: center;
 
     font-family: "Orbitron", sans-serif;
-    /* background: var(--color-background); */
     background: var(--gradient-background);
 
     -webkit-font-smoothing: antialiased;
@@ -120,20 +112,45 @@ body {
 
 @media (max-width: 660px) {
     body {
-        grid-template-columns: repeat(2, var(--px-grid-square));
-        grid-template-rows: repeat(6, var(--px-grid-square));
+        display: grid;
+        grid:
+            "header prince" var(--px-square)
+            "projects beBop" var(--px-square)
+            "doom matrix" var(--px-square)
+            "johnnyCab footer" var(--px-square)
+            / var(--px-square) var(--px-square);
+    }
+
+    video.mtv {
+        display: none;
     }
 }
 
 @media (max-width: 440px) {
+    video.mtv {
+        display: unset;
+    }
+
     body {
-        grid-template-columns: repeat(1, var(--px-grid-square));
-        grid-template-rows: repeat(9, var(--px-grid-square));
+        display: grid;
+        grid:
+            "header" var(--px-square)
+            "prince" var(--px-square)
+            "mtv" var(--px-square)
+            "projects" var(--px-square)
+            "beBop" var(--px-square)
+            "doom" var(--px-square)
+            "matrix" var(--px-square)
+            "johnnyCab" var(--px-square)
+            "footer" var(--px-square)
+            / var(--px-square);
     }
 }
 
 /* header ---------------------------------------------------- */
 header {
+    grid-area: header;
+
     width: 100%;
     height: 100%;
     padding: var(--px-gap-small);
@@ -146,6 +163,17 @@ header {
 
     color: var(--color-background);
     background: var(--color-cta);
+}
+
+/* beBop ------------------------------------------------------ */
+img.beBop {
+    grid-area: beBop;
+}
+
+/* beBop ------------------------------------------------------ */
+video.mtv {
+    grid-area: mtv;
+    filter: grayscale(1);
 }
 
 /* johnnyCab ------------------------------------------------------ */
@@ -161,6 +189,8 @@ header {
 }
 
 section.johnnyCab {
+    grid-area: johnnyCab;
+
     width: 100%;
     height: 100%;
 
@@ -168,9 +198,6 @@ section.johnnyCab {
 }
 
 section.johnnyCab img {
-    width: 100%;
-    height: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -190,6 +217,8 @@ section.johnnyCab img:nth-child(3) {
 
 /* doom ------------------------------------------------------ */
 section.doom {
+    grid-area: doom;
+
     width: 100%;
     height: 100%;
 
@@ -208,9 +237,6 @@ section.doom {
 }
 
 section.doom > img {
-    width: 100%;
-    height: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -251,6 +277,8 @@ section.doom svg text {
 
 /* matrix ------------------------------------------------------ */
 section.matrix {
+    grid-area: matrix;
+
     width: 100%;
     height: 100%;
 
@@ -275,6 +303,8 @@ section.matrix .col span {
 
 /* projects ---------------------------------------------------- */
 main.projects {
+    grid-area: projects;
+
     width: 100%;
     height: 100%;
 
@@ -303,7 +333,7 @@ main.projects div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--px-gap-large);
+    gap: var(--px-gap-med);
 
     color: var(--color-text-default);
 }
@@ -322,10 +352,12 @@ main.projects ul {
 
 /* footer ---------------------------------------------------- */
 footer {
+    grid-area: footer;
+
     width: 100%;
     height: 100%;
 
-    padding: var(--px-gap-large);
+    padding: var(--px-gap-med);
     display: flex;
     flex-direction: column;
     justify-content: center;

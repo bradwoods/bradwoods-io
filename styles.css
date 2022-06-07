@@ -15,8 +15,8 @@
     --color-text-heading: #fff;
     --color-text-overlay: #fff;
     --color-cta: #e3a23a;
-    --color-background: #101011;
     --color-border: #fff;
+    --color-background: #101011;
     --gradient-background: radial-gradient(
         ellipse at center,
         #272829 0%,
@@ -113,7 +113,9 @@ body {
     align-content: center;
 
     font-family: "Orbitron", sans-serif;
+
     background: var(--gradient-background);
+    background-attachment: fixed;
 
     -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;

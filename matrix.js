@@ -1,10 +1,10 @@
 const PARENT_ELEMENT_WIDTH_PX = 220;
-const CHAR_COUNT = 13;
+const CHAR_COUNT = 17;
 const COL_COUNT = 8;
 
 const speedMS = {
-    max: 300,
-    min: 100,
+    max: 28,
+    min: 200,
 };
 const delayMS = {
     max: 2000,

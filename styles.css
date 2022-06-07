@@ -299,6 +299,7 @@ section.matrix .col {
 section.matrix .col span {
     color: var(--color-text-default);
     line-height: 1.1;
+    font-size: 12px;
 }
 
 /* projects ---------------------------------------------------- */

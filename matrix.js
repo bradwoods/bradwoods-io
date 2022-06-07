@@ -4,7 +4,7 @@ const COL_COUNT = 8;
 
 const speedMS = {
     max: 300,
-    min: 50,
+    min: 100,
 };
 const delayMS = {
     max: 2000,

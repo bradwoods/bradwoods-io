@@ -222,7 +222,7 @@ section.johnnyCab img {
 section.johnnyCab img:nth-child(2),
 section.johnnyCab img:nth-child(3) {
     opacity: 0;
-    animation: johnnyCab 2s infinite;
+    animation: johnnyCab 2s linear infinite;
 }
 
 section.johnnyCab img:nth-child(3) {
@@ -258,7 +258,7 @@ section.doom > img {
     filter: grayscale(1);
     opacity: 0;
 
-    animation: doom 3s infinite;
+    animation: doom 3s linear infinite;
 }
 
 section.doom > img:nth-child(2) {
@@ -392,11 +392,11 @@ footer {
     }
 
     11%,
-    13% {
+    12% {
         transform: translateX(-100%);
     }
 
-    14% {
+    13% {
         transform: translateX(0);
     }
 }
@@ -406,7 +406,7 @@ footer img {
     bottom: 0;
     left: 100%;
 
-    animation: toastie 38s infinite;
+    animation: toastie 32s linear infinite;
 }
 
 footer ul {

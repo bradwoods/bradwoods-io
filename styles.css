@@ -179,12 +179,18 @@ header {
     filter: url(#distressFilter);
 }
 
+/* prince ------------------------------------------------------ */
+img.prince {
+    grid-area: prince;
+    transform: scaleX(-1);
+}
+
 /* beBop ------------------------------------------------------ */
 img.beBop {
     grid-area: beBop;
 }
 
-/* beBop ------------------------------------------------------ */
+/* mtv ------------------------------------------------------ */
 video.mtv {
     grid-area: mtv;
     filter: grayscale(1);

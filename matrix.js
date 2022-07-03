@@ -101,7 +101,7 @@
         setTimeout(start, getDelayMS());
     }
 
-    const section = document.querySelector(".matrix");
+    const section = document.querySelector("#matrix");
     // There always needs to be a column on the left & right edges
     const colLefts = [
         0,

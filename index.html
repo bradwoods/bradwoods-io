@@ -60,48 +60,56 @@
             </filter>
         </svg>
 
+        <!-- HEADER ------------------------------------------------------>
         <header>
             <h1 class="textLarge">Brad Woods</h1>
             <p class="textMed">Front-end engineer</p>
+            <img alt="TODO" id="killBill" src="images/killBill.png" />
         </header>
 
-        <img
-            alt="The artist formally known as Prince."
-            id="prince"
-            src="images/prince.png"
-        />
-
-        <img
-            alt="A silhouette of a girl leaning forward."
-            id="beBop"
-            src="images/beBop.png"
-        />
-
-        <img
-            alt="2 people advertising a can of Jolt Cola."
-            id="hackers"
-            src="images/hackers.png"
-        />
-
-        <section id="doom">
+        <!-- PRINCE ------------------------------------------------------>
+        <div id="princeSquare">
             <img
-                alt="Portrait of a man from a video game."
-                src="images/doom1.png"
+                alt="The artist formally known as Prince."
+                id="prince"
+                src="images/prince.png"
             />
+            <img alt="TODO" id="fightClub" src="images/fightClub.png" />
+        </div>
+
+        <!-- BE_BOP ------------------------------------------------------>
+        <div id="beBopSquare">
             <img
-                alt="Portrait of a man from a video game."
-                src="images/doom2.png"
+                alt="A silhouette of a girl leaning forward."
+                id="beBop"
+                src="images/beBop.png"
             />
-            <img
-                alt="Portrait of a man from a video game."
-                src="images/doom3.png"
-            />
-            <svg aria-hidden="true" viewBox="0 0 220 220">
+            <img alt="TODO" id="dune" src="images/dune.png" />
+        </div>
+
+        <!-- DOOM ------------------------------------------------>
+        <div id="doomSquare">
+            <section id="doom">
+                <img
+                    alt="Portrait of a man from a video game."
+                    src="images/doom1.png"
+                />
+                <img
+                    alt="Portrait of a man from a video game."
+                    src="images/doom2.png"
+                />
+                <img
+                    alt="Portrait of a man from a video game."
+                    src="images/doom3.png"
+                />
+            </section>
+            <img alt="TODO" id="aliens" src="images/aliens.png" />
+            <svg id="hud" aria-hidden="true" viewBox="0 0 220 220">
                 <text x="0" y="12">X3</text>
                 <text x="0" y="200">Ammo: 16</text>
                 <text x="0" y="212">Health: 64%</text>
             </svg>
-        </section>
+        </div>
 
         <main id="projects">
             <div>
@@ -155,21 +163,38 @@
             </svg>
         </main>
 
-        <section id="matrix"></section>
+        <!-- MATRIX ------------------------------------------------------>
+        <div id="matrixSquare">
+            <section id="matrix"></section>
+            <img alt="TODO" id="pilgrim" src="images/pilgrim.png" />
+        </div>
 
-        <video autoplay id="mtv" width="100%" height="100%" muted loop>
-            <source src="videos/mtv.mp4" type="video/mp4" />
-            <p>An astronaut planting the MTV flag on the moon.</p>
-        </video>
-
-        <section id="johnnyCab">
+        <!-- MTV ------------------------------------------------------>
+        <div id="mtvSquare">
+            <video autoplay id="mtv" width="100%" height="100%" muted loop>
+                <source src="videos/mtv.mp4" type="video/mp4" />
+                <p>An astronaut planting the MTV flag on the moon.</p>
+            </video>
             <img
-                alt="A sci-fi robot taxi driver with no lower body."
-                src="images/johnnyCab.png"
+                alt="2 people advertising a can of Jolt Cola."
+                id="hackers"
+                src="images/hackers.png"
             />
-            <img alt="" src="images/johnnyCabLights1.png" />
-            <img alt="" src="images/johnnyCabLights2.png" />
-        </section>
+            <div class="vignette"></div>
+        </div>
+
+        <!-- JOHNNY_CAB ------------------------------------------------------>
+        <div id="johnnyCabSquare">
+            <section id="johnnyCab">
+                <img
+                    alt="A sci-fi robot taxi driver with no lower body."
+                    src="images/johnnyCab.png"
+                />
+                <img alt="" src="images/johnnyCabLights1.png" />
+                <img alt="" src="images/johnnyCabLights2.png" />
+            </section>
+            <img alt="TODO" id="xMen" src="images/xMen.png" />
+        </div>
 
         <footer>
             <ul>

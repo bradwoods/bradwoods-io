@@ -45,7 +45,7 @@ html {
     height: 100%;
 }
 
-/* text ------------------------------------------ */
+/* TEXT ------------------------------------------ */
 /* https://seek-oss.github.io/capsize/ */
 .textLarge {
     font-size: 23.6111px;
@@ -96,7 +96,7 @@ svg#defs {
     pointer-events: none;
 }
 
-/* grid --------------------------------------------- */
+/* GRID --------------------------------------------- */
 body {
     width: 100%;
     min-height: 100%;
@@ -121,7 +121,7 @@ body {
     overscroll-behavior: none;
 }
 
-/* header ---------------------------------------------------- */
+/* HEADER ---------------------------------------------------- */
 header {
     grid-area: header;
 
@@ -140,31 +140,122 @@ header {
     filter: url(#distressFilter);
 }
 
-/* prince ------------------------------------------------------ */
-img#prince {
-    grid-area: prince;
-    transform: scaleX(-1);
-}
+img#killBill {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
 
-/* beBop ------------------------------------------------------ */
-img#beBop {
-    grid-area: beBop;
-}
-
-/* hackers ------------------------------------------------------ */
-img#hackers {
-    grid-area: mtv;
-    filter: grayscale(1);
     display: none;
 }
 
-/* mtv ------------------------------------------------------ */
-video#mtv {
+header:hover h1,
+header:hover p {
+    display: none;
+}
+
+header:hover img#killBill {
+    display: unset;
+}
+
+/* PRINCE ------------------------------------------------------ */
+div#princeSquare {
+    grid-area: prince;
+    position: relative;
+    display: flex;
+}
+
+img#prince {
+    transform: scaleX(-1);
+}
+
+div#princeSquare:hover img#prince {
+    display: none;
+}
+
+img#fightClub {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+div#princeSquare:hover img#fightClub {
+    display: unset;
+}
+
+/* BE_BOP ------------------------------------------------------ */
+div#beBopSquare {
+    grid-area: beBop;
+    position: relative;
+    display: flex;
+}
+
+div#beBopSquare:hover img#beBop {
+    display: none;
+}
+
+img#dune {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+div#beBopSquare:hover img#dune {
+    display: unset;
+}
+
+/* MTV ------------------------------------------------------ */
+div#mtvSquare {
     grid-area: mtv;
+    position: relative;
+    display: flex;
+}
+
+video#mtv {
     filter: grayscale(1);
 }
 
-/* johnnyCab ------------------------------------------------------ */
+img#hackers {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+div.vignette {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* prettier-ignore */
+    box-shadow: 
+        inset 0 0 50px hsla(0, 0%, 0%, 0.7),
+        inset 0 0 50px hsla(0, 0%, 0%, 1);
+    background: radial-gradient(
+        hsla(0, 0%, 0%, 0) 30%,
+        hsla(0, 0%, 0%, 0.1) 50%,
+        hsla(0, 0%, 0%, 0.4) 90%,
+        hsla(0, 0%, 0%, 0.6) 100%
+    );
+}
+
+div#mtvSquare:hover video#mtv {
+    display: none;
+}
+
+div#mtvSquare:hover img#hackers {
+    display: unset;
+}
+
+/* JOHNNY_CAB ------------------------------------------------------ */
 @keyframes johnnyCab {
     0%,
     50% {
@@ -176,6 +267,12 @@ video#mtv {
     }
 }
 
+div#johnnyCabSquare {
+    grid-area: johnnyCab;
+
+    position: relative;
+}
+
 section#johnnyCab {
     grid-area: johnnyCab;
 
@@ -183,6 +280,10 @@ section#johnnyCab {
     height: 100%;
 
     position: relative;
+}
+
+section#johnnyCab:hover {
+    opacity: 0;
 }
 
 section#johnnyCab img {
@@ -203,10 +304,33 @@ section#johnnyCab img:nth-child(3) {
     animation-delay: 1s;
 }
 
-/* doom ------------------------------------------------------ */
-section#doom {
+img#xMen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    display: none;
+    pointer-events: none;
+}
+
+div#johnnyCabSquare:hover section#johnnyCab {
+    display: none;
+}
+
+div#johnnyCabSquare:hover img#xMen {
+    display: initial;
+}
+
+/* DOOM ------------------------------------------------------ */
+div#doomSquare {
     grid-area: doom;
 
+    position: relative;
+    display: flex;
+}
+
+section#doom {
     width: 100%;
     height: 100%;
 
@@ -243,18 +367,24 @@ section#doom > img:nth-child(3) {
     animation-delay: 2s;
 }
 
-section#doom svg {
+img#aliens {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+div#doomSquare svg#hud {
     width: 100%;
     height: 100%;
 
     position: absolute;
     top: 0;
     left: 0;
-
-    pointer-events: none;
 }
 
-section#doom svg text {
+div#doomSquare svg#hud text {
     font-variation-settings: "wght" 700;
     font-size: 6px;
     text-transform: uppercase;
@@ -263,10 +393,23 @@ section#doom svg text {
     fill: var(--color-text-overlay);
 }
 
-/* matrix ------------------------------------------------------ */
-section#matrix {
+div#doomSquare:hover section#doom {
+    display: none;
+}
+
+div#doomSquare:hover img#aliens {
+    display: unset;
+}
+
+/* MATRIX ------------------------------------------------------ */
+div#matrixSquare {
     grid-area: matrix;
 
+    position: relative;
+    display: flex;
+}
+
+section#matrix {
     width: 100%;
     height: 100%;
 
@@ -290,7 +433,23 @@ section#matrix .col span {
     font-size: 12px;
 }
 
-/* projects ---------------------------------------------------- */
+img#pilgrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+div#matrixSquare:hover section#matrix {
+    display: none;
+}
+
+div#matrixSquare:hover img#pilgrim {
+    display: unset;
+}
+
+/* PROJECTS ---------------------------------------------------- */
 main#projects {
     grid-area: projects;
 
@@ -339,7 +498,7 @@ main#projects ul {
     list-style: none;
 }
 
-/* footer ---------------------------------------------------- */
+/* FOOTER ---------------------------------------------------- */
 footer {
     grid-area: footer;
 
@@ -391,7 +550,7 @@ footer ul {
     list-style: none;
 }
 
-/* clickables ---------------------------------------------------- */
+/* CLICKABLES ---------------------------------------------------- */
 li {
     display: flex;
 }
@@ -418,6 +577,7 @@ a:focus {
     outline: 1px solid var(--color-cta);
 }
 
+/* MEDIA_QUERIES ---------------------------------------------------- */
 @media (max-width: 660px) {
     body {
         display: grid;
@@ -429,7 +589,9 @@ a:focus {
             / var(--px-square) var(--px-square);
     }
 
-    video#mtv {
+    /* To form a rectangle, MTV is dropped in 2 column layout */
+    video#mtv,
+    div.vignette {
         display: none;
     }
 }
@@ -452,8 +614,11 @@ a:focus {
             / var(--px-square);
     }
 
-    /* mtv isn't displayed on mobile because large payload. Hackers is displayed instead. */
+    /* MTV isn't displayed on mobile because large payload. Hackers is displayed instead. */
     img#hackers {
+        opacity: 1;
+    }
+    div.vignette {
         display: unset;
     }
 }

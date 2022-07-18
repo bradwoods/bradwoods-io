@@ -169,10 +169,6 @@ img#prince {
     transform: scaleX(-1);
 }
 
-div#princeSquare:hover img#prince {
-    display: none;
-}
-
 img#fightClub {
     position: absolute;
     top: 0;
@@ -181,9 +177,13 @@ img#fightClub {
     display: none;
 }
 
+/* div#princeSquare:hover img#prince {
+    display: none;
+}
+
 div#princeSquare:hover img#fightClub {
     display: unset;
-}
+} */
 
 /* BE_BOP ------------------------------------------------------ */
 div#beBopSquare {
@@ -393,13 +393,13 @@ div#doomSquare svg#hud text {
     fill: var(--color-text-overlay);
 }
 
-div#doomSquare:hover section#doom {
+/* div#doomSquare:hover section#doom {
     display: none;
 }
 
 div#doomSquare:hover img#aliens {
     display: unset;
-}
+} */
 
 /* MATRIX ------------------------------------------------------ */
 div#matrixSquare {
@@ -441,13 +441,13 @@ img#pilgrim {
     display: none;
 }
 
-div#matrixSquare:hover section#matrix {
+/* div#matrixSquare:hover section#matrix {
     display: none;
 }
 
 div#matrixSquare:hover img#pilgrim {
     display: unset;
-}
+} */
 
 /* PROJECTS ---------------------------------------------------- */
 main#projects {

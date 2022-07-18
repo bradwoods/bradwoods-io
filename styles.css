@@ -615,9 +615,7 @@ a:focus {
     }
 
     /* MTV isn't displayed on mobile because large payload. Hackers is displayed instead. */
-    img#hackers {
-        opacity: 1;
-    }
+    img#hackers,
     div.vignette {
         display: unset;
     }

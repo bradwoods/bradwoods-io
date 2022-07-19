@@ -169,7 +169,7 @@ img#prince {
     transform: scaleX(-1);
 }
 
-img#fightClub {
+img#daftPunk {
     position: absolute;
     top: 0;
     left: 0;
@@ -177,13 +177,13 @@ img#fightClub {
     display: none;
 }
 
-/* div#princeSquare:hover img#prince {
+div#princeSquare:hover img#prince {
     display: none;
 }
 
-div#princeSquare:hover img#fightClub {
+div#princeSquare:hover img#daftPunk {
     display: unset;
-} */
+}
 
 /* BE_BOP ------------------------------------------------------ */
 div#beBopSquare {
@@ -433,7 +433,7 @@ section#matrix .col span {
     font-size: 12px;
 }
 
-img#pilgrim {
+img#gOT {
     position: absolute;
     top: 0;
     left: 0;
@@ -441,13 +441,13 @@ img#pilgrim {
     display: none;
 }
 
-/* div#matrixSquare:hover section#matrix {
+div#matrixSquare:hover section#matrix {
     display: none;
 }
 
-div#matrixSquare:hover img#pilgrim {
+div#matrixSquare:hover img#gOT {
     display: unset;
-} */
+}
 
 /* PROJECTS ---------------------------------------------------- */
 main#projects {

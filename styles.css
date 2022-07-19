@@ -393,13 +393,13 @@ div#doomSquare svg#hud text {
     fill: var(--color-text-overlay);
 }
 
-/* div#doomSquare:hover section#doom {
+div#doomSquare:hover section#doom {
     display: none;
 }
 
 div#doomSquare:hover img#aliens {
     display: unset;
-} */
+}
 
 /* MATRIX ------------------------------------------------------ */
 div#matrixSquare {

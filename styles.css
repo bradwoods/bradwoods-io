@@ -103,11 +103,8 @@ body {
     padding: var(--px-gap-large, 0);
 
     display: grid;
-    grid:
-        "header prince beBop" var(--px-square)
-        "doom projects matrix" var(--px-square)
-        "mtv johnnyCab footer" var(--px-square)
-        / var(--px-square) var(--px-square) var(--px-square);
+    grid-template-columns: repeat(3, var(--px-square));
+    grid-template-rows: repeat(3, var(--px-square));
 
     justify-content: center;
     align-content: center;
@@ -121,10 +118,29 @@ body {
     overscroll-behavior: none;
 }
 
+.square {
+    position: relative;
+    display: flex;
+}
+
+.square > :nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+}
+
+.square:hover > :first-child {
+    display: none;
+}
+
+.square:hover > :nth-child(2) {
+    display: unset;
+}
+
 /* HEADER ---------------------------------------------------- */
 header {
-    grid-area: header;
-
     width: 100%;
     height: 100%;
     padding: var(--px-gap-small);
@@ -159,177 +175,11 @@ header:hover img#killBill {
 }
 
 /* PRINCE ------------------------------------------------------ */
-div#princeSquare {
-    grid-area: prince;
-    position: relative;
-    display: flex;
-}
-
 img#prince {
     transform: scaleX(-1);
 }
 
-img#daftPunk {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: none;
-}
-
-div#princeSquare:hover img#prince {
-    display: none;
-}
-
-div#princeSquare:hover img#daftPunk {
-    display: unset;
-}
-
-/* BE_BOP ------------------------------------------------------ */
-div#beBopSquare {
-    grid-area: beBop;
-    position: relative;
-    display: flex;
-}
-
-div#beBopSquare:hover img#beBop {
-    display: none;
-}
-
-img#dune {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: none;
-}
-
-div#beBopSquare:hover img#dune {
-    display: unset;
-}
-
-/* MTV ------------------------------------------------------ */
-div#mtvSquare {
-    grid-area: mtv;
-    position: relative;
-    display: flex;
-}
-
-video#mtv {
-    filter: grayscale(1);
-}
-
-img#hackers {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: none;
-}
-
-div.vignette {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    /* prettier-ignore */
-    box-shadow: 
-        inset 0 0 50px hsla(0, 0%, 0%, 0.7),
-        inset 0 0 50px hsla(0, 0%, 0%, 1);
-    background: radial-gradient(
-        hsla(0, 0%, 0%, 0) 30%,
-        hsla(0, 0%, 0%, 0.1) 50%,
-        hsla(0, 0%, 0%, 0.4) 90%,
-        hsla(0, 0%, 0%, 0.6) 100%
-    );
-}
-
-div#mtvSquare:hover video#mtv {
-    display: none;
-}
-
-div#mtvSquare:hover img#hackers {
-    display: unset;
-}
-
-/* JOHNNY_CAB ------------------------------------------------------ */
-@keyframes johnnyCab {
-    0%,
-    50% {
-        opacity: 1;
-    }
-    51%,
-    100% {
-        opacity: 0;
-    }
-}
-
-div#johnnyCabSquare {
-    grid-area: johnnyCab;
-
-    position: relative;
-}
-
-section#johnnyCab {
-    grid-area: johnnyCab;
-
-    width: 100%;
-    height: 100%;
-
-    position: relative;
-}
-
-section#johnnyCab:hover {
-    opacity: 0;
-}
-
-section#johnnyCab img {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    transform: scaleX(-1);
-}
-
-section#johnnyCab img:nth-child(2),
-section#johnnyCab img:nth-child(3) {
-    opacity: 0;
-    animation: johnnyCab 2s linear infinite;
-}
-
-section#johnnyCab img:nth-child(3) {
-    animation-delay: 1s;
-}
-
-img#xMen {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    display: none;
-    pointer-events: none;
-}
-
-div#johnnyCabSquare:hover section#johnnyCab {
-    display: none;
-}
-
-div#johnnyCabSquare:hover img#xMen {
-    display: initial;
-}
-
 /* DOOM ------------------------------------------------------ */
-div#doomSquare {
-    grid-area: doom;
-
-    position: relative;
-    display: flex;
-}
-
 section#doom {
     width: 100%;
     height: 100%;
@@ -367,15 +217,7 @@ section#doom > img:nth-child(3) {
     animation-delay: 2s;
 }
 
-img#aliens {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: none;
-}
-
-div#doomSquare svg#hud {
+svg#hud {
     width: 100%;
     height: 100%;
 
@@ -384,7 +226,8 @@ div#doomSquare svg#hud {
     left: 0;
 }
 
-div#doomSquare svg#hud text {
+/* div#doomSquare  */
+svg#hud text {
     font-variation-settings: "wght" 700;
     font-size: 6px;
     text-transform: uppercase;
@@ -393,66 +236,8 @@ div#doomSquare svg#hud text {
     fill: var(--color-text-overlay);
 }
 
-div#doomSquare:hover section#doom {
-    display: none;
-}
-
-div#doomSquare:hover img#aliens {
-    display: unset;
-}
-
-/* MATRIX ------------------------------------------------------ */
-div#matrixSquare {
-    grid-area: matrix;
-
-    position: relative;
-    display: flex;
-}
-
-section#matrix {
-    width: 100%;
-    height: 100%;
-
-    position: relative;
-    overflow: hidden;
-}
-
-section#matrix .col {
-    height: 100%;
-
-    position: absolute;
-    top: -4px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-section#matrix .col span {
-    color: var(--color-text-default);
-    line-height: 1.1;
-    font-size: 12px;
-}
-
-img#gOT {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: none;
-}
-
-div#matrixSquare:hover section#matrix {
-    display: none;
-}
-
-div#matrixSquare:hover img#gOT {
-    display: unset;
-}
-
 /* PROJECTS ---------------------------------------------------- */
 main#projects {
-    grid-area: projects;
-
     width: 100%;
     height: 100%;
 
@@ -498,10 +283,105 @@ main#projects ul {
     list-style: none;
 }
 
+/* MATRIX ------------------------------------------------------ */
+section#matrix {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    overflow: hidden;
+}
+
+section#matrix .col {
+    height: 100%;
+
+    position: absolute;
+    top: -4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section#matrix .col span {
+    color: var(--color-text-default);
+    line-height: 1.1;
+    font-size: 12px;
+}
+
+/* MTV ------------------------------------------------------ */
+video#mtv {
+    filter: grayscale(1);
+}
+
+div.vignette {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* prettier-ignore */
+    box-shadow: 
+        inset 0 0 50px hsla(0, 0%, 0%, 0.7),
+        inset 0 0 50px hsla(0, 0%, 0%, 1);
+    background: radial-gradient(
+        hsla(0, 0%, 0%, 0) 30%,
+        hsla(0, 0%, 0%, 0.1) 50%,
+        hsla(0, 0%, 0%, 0.4) 90%,
+        hsla(0, 0%, 0%, 0.6) 100%
+    );
+}
+
+/* JOHNNY_CAB ------------------------------------------------------ */
+@keyframes johnnyCab {
+    0%,
+    50% {
+        opacity: 1;
+    }
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+section#johnnyCab {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+section#johnnyCab img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: scaleX(-1);
+}
+
+section#johnnyCab img:nth-child(2),
+section#johnnyCab img:nth-child(3) {
+    opacity: 0;
+    animation: johnnyCab 2s linear infinite;
+}
+
+section#johnnyCab img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+img#xMen {
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    display: none; */
+    pointer-events: none;
+}
+
 /* FOOTER ---------------------------------------------------- */
 footer {
-    grid-area: footer;
-
     width: 100%;
     height: 100%;
 
@@ -580,18 +460,17 @@ a:focus {
 /* MEDIA_QUERIES ---------------------------------------------------- */
 @media (max-width: 660px) {
     body {
-        display: grid;
-        grid:
-            "header prince" var(--px-square)
-            "projects beBop" var(--px-square)
-            "doom matrix" var(--px-square)
-            "johnnyCab footer" var(--px-square)
-            / var(--px-square) var(--px-square);
+        grid-template-columns: repeat(2, var(--px-square));
+        grid-template-rows: repeat(4, var(--px-square));
+        grid-auto-flow: row dense;
+    }
+
+    div#beBopSquare {
+        grid-column: 2;
     }
 
     /* To form a rectangle, MTV is dropped in 2 column layout */
-    video#mtv,
-    div.vignette {
+    div#mtvSquare {
         display: none;
     }
 }
@@ -599,24 +478,20 @@ a:focus {
 @media (max-width: 440px) {
     body {
         padding: calc((100% - 220px) / 2) 0;
+        grid-template-columns: var(--px-square);
+        grid-template-rows: repeat(9, var(--px-square));
+    }
 
-        display: grid;
-        grid:
-            "header" var(--px-square)
-            "prince" var(--px-square)
-            "mtv" var(--px-square)
-            "projects" var(--px-square)
-            "beBop" var(--px-square)
-            "doom" var(--px-square)
-            "matrix" var(--px-square)
-            "johnnyCab" var(--px-square)
-            "footer" var(--px-square)
-            / var(--px-square);
+    div#beBopSquare {
+        grid-column: unset;
     }
 
     /* MTV isn't displayed on mobile because large payload. Hackers is displayed instead. */
-    img#hackers,
-    div.vignette {
+    div#mtvSquare,
+    img#hackers {
         display: unset;
+    }
+    video#mtv {
+        display: none;
     }
 }

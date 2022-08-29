@@ -405,11 +405,11 @@ footer {
     }
 
     11%,
-    12% {
+    14% {
         transform: translateX(-100%);
     }
 
-    13% {
+    15% {
         transform: translateX(0);
     }
 }

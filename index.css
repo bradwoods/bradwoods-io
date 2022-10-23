@@ -6,10 +6,13 @@
 }
 
 :root {
-    --px-square: 220px;
-    --px-gap-large: 64px;
-    --px-gap-med: 24px;
-    --px-gap-small: 12px;
+    --grid-square-min-px: 220px;
+
+    --gap-large: 16px;
+    --gap-small: 8px;
+
+    --weight-large: "wght" 900;
+    --weight-small: "wght" 550;
 
     --color-text-default: #bfbfbf;
     --color-text-heading: #fff;
@@ -27,21 +30,17 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-}
-
-* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
-}
 
-html {
+    width: 100%;
     height: 100%;
 }
 
@@ -50,9 +49,6 @@ html {
 .textLarge {
     font-size: 23.6111px;
     line-height: 25px;
-
-    font-variation-settings: "wght" 900;
-    text-transform: uppercase;
 }
 
 .textLarge::before {
@@ -67,21 +63,18 @@ html {
     display: table;
 }
 
-.textMed {
+.textSmall {
     font-size: 13.8889px;
     line-height: 18px;
-
-    font-variation-settings: "wght" 800;
-    text-transform: uppercase;
 }
 
-.textMed::before {
+.textSmall::before {
     content: "";
     margin-bottom: -0.312em;
     display: table;
 }
 
-.textMed::after {
+.textSmall::after {
     content: "";
     margin-top: -0.264em;
     display: table;
@@ -100,14 +93,10 @@ svg#defs {
 body {
     width: 100%;
     min-height: 100%;
-    padding: var(--px-gap-large, 0);
 
-    display: grid;
-    grid-template-columns: repeat(3, var(--px-square));
-    grid-template-rows: repeat(3, var(--px-square));
-
+    display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 
     font-family: "Orbitron", sans-serif;
 
@@ -118,12 +107,33 @@ body {
     overscroll-behavior: none;
 }
 
+div#grid {
+    width: 100%;
+    max-width: calc(3 * var(--grid-square-min-px));
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* SQUARE --------------------------------------------- */
 .square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
     position: relative;
     display: flex;
 }
 
-.square > :nth-child(2) {
+*.primary {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+*.secondary {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
     position: absolute;
     bottom: 0;
     left: 0;
@@ -131,38 +141,38 @@ body {
     display: none;
 }
 
-.square:hover > :first-child {
+.square:hover > *.primary {
     display: none;
 }
 
-.square:hover > :nth-child(2) {
+.square:hover > *.secondary {
     display: unset;
 }
 
 /* HEADER ---------------------------------------------------- */
 header {
     width: 100%;
-    height: 100%;
-    padding: var(--px-gap-small);
+    aspect-ratio: 1 / 1;
+    padding: var(--gap-small);
+
+    position: relative;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: var(--px-gap-small);
+    gap: var(--gap-small);
 
     color: var(--color-background);
     background: var(--color-cta);
-    filter: url(#distressFilter);
 }
 
-img#killBill {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
+header h1 {
+    font-variation-settings: var(--weight-large);
+}
 
-    display: none;
+header p {
+    font-variation-settings: var(--weight-small);
 }
 
 header:hover h1,
@@ -170,19 +180,14 @@ header:hover p {
     display: none;
 }
 
-header:hover img#killBill {
+header:hover img {
     display: unset;
-}
-
-/* PRINCE ------------------------------------------------------ */
-img#prince {
-    transform: scaleX(-1);
 }
 
 /* DOOM ------------------------------------------------------ */
 section#doom {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
 
     position: relative;
 }
@@ -199,6 +204,9 @@ section#doom {
 }
 
 section#doom > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -217,6 +225,17 @@ section#doom > img:nth-child(3) {
     animation-delay: 2s;
 }
 
+img#aliens {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
 svg#hud {
     width: 100%;
     height: 100%;
@@ -226,9 +245,8 @@ svg#hud {
     left: 0;
 }
 
-/* div#doomSquare  */
 svg#hud text {
-    font-variation-settings: "wght" 700;
+    font-variation-settings: var(--weight-small);
     font-size: 6px;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -236,17 +254,25 @@ svg#hud text {
     fill: var(--color-text-overlay);
 }
 
+.square:hover > section#doom {
+    display: none;
+}
+
+.square:hover > img#aliens {
+    display: unset;
+}
+
 /* PROJECTS ---------------------------------------------------- */
 main#projects {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
 
     position: relative;
 }
 
 main#projects svg {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
 
     position: absolute;
     top: 0;
@@ -259,28 +285,22 @@ main#projects svg path {
     stroke: var(--color-border);
 }
 
-main#projects div {
+main#projects div.textLayout {
     width: 100%;
     height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--px-gap-med);
+    gap: var(--gap-small);
 
     color: var(--color-text-default);
 }
 
 main#projects h1 {
     color: var(--color-text-heading);
-}
-
-main#projects ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    list-style: none;
+    font-variation-settings: var(--weight-large);
+    letter-spacing: 0.2em;
 }
 
 /* MATRIX ------------------------------------------------------ */
@@ -306,6 +326,10 @@ section#matrix .col span {
     color: var(--color-text-default);
     line-height: 1.1;
     font-size: 12px;
+}
+
+.square:hover section#matrix {
+    display: none;
 }
 
 /* MTV ------------------------------------------------------ */
@@ -334,6 +358,22 @@ div.vignette {
 }
 
 /* JOHNNY_CAB ------------------------------------------------------ */
+section.johnnyCab {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+section.johnnyCab img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @keyframes johnnyCab {
     0%,
     50% {
@@ -345,39 +385,35 @@ div.vignette {
     }
 }
 
-section#johnnyCab {
-    width: 100%;
-    height: 100%;
-
-    position: relative;
-}
-
-section#johnnyCab img {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    transform: scaleX(-1);
-}
-
-section#johnnyCab img:nth-child(2),
-section#johnnyCab img:nth-child(3) {
+section.johnnyCab img:nth-child(2),
+section.johnnyCab img:nth-child(3) {
     opacity: 0;
     animation: johnnyCab 2s linear infinite;
 }
 
-section#johnnyCab img:nth-child(3) {
+section.johnnyCab img:nth-child(3) {
     animation-delay: 1s;
 }
 
 img#xMen {
-    /* position: absolute;
+    width: 100%;
+    aspect-ratio: 1 / 3;
+
+    position: absolute;
     bottom: 0;
     left: 0;
     z-index: 1;
 
-    display: none; */
+    display: none;
     pointer-events: none;
+}
+
+.square.johnnyCab:hover section.johnnyCab {
+    display: none;
+}
+
+.square.johnnyCab:hover img#xMen {
+    display: unset;
 }
 
 /* FOOTER ---------------------------------------------------- */
@@ -388,11 +424,8 @@ footer {
     position: relative;
     overflow: hidden;
 
-    padding: var(--px-gap-med);
+    padding: 0 var(--gap-large);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--px-gap-small);
 
     color: var(--color-text-default);
     border: 1px solid var(--color-border);
@@ -415,6 +448,9 @@ footer {
 }
 
 footer img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
     position: absolute;
     bottom: 0;
     left: 100%;
@@ -422,7 +458,10 @@ footer img {
     animation: toastie 24s linear infinite;
 }
 
-footer ul {
+/* LINK LIST ---------------------------------------------------- */
+ul.links {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -430,38 +469,40 @@ footer ul {
     list-style: none;
 }
 
-/* CLICKABLES ---------------------------------------------------- */
-li {
+ul.links li {
+    width: 100%;
     display: flex;
 }
 
-a {
+ul.links a {
     width: 100%;
-    padding: 8px 0;
+    padding: var(--gap-small) 0;
 
     color: var(--color-text-default);
     text-decoration: underline;
     cursor: pointer;
+    font-variation-settings: var(--weight-small);
 }
 
-a.cta {
+ul.links a.cta {
     color: var(--color-cta);
 }
 
-a:hover {
+ul.links a:hover {
     background: var(--color-cta);
     color: var(--color-background);
 }
 
-a:focus {
+ul.links a:focus {
     outline: 1px solid var(--color-cta);
 }
 
 /* MEDIA_QUERIES ---------------------------------------------------- */
+/* 3 * --grid-square-min-px */
 @media (max-width: 660px) {
-    body {
-        grid-template-columns: repeat(2, var(--px-square));
-        grid-template-rows: repeat(4, var(--px-square));
+    div#grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-auto-flow: row dense;
     }
 
@@ -473,13 +514,27 @@ a:focus {
     div#mtvSquare {
         display: none;
     }
+
+    main#projects {
+        padding: 0 16px;
+    }
+
+    main#projects h1 {
+        display: none;
+    }
+
+    ul.links a {
+        width: 100%;
+
+        padding: 17px 0;
+    }
 }
 
+/* 2 * --grid-square-min-px */
 @media (max-width: 440px) {
-    body {
-        padding: calc((100% - 220px) / 2) 0;
-        grid-template-columns: var(--px-square);
-        grid-template-rows: repeat(9, var(--px-square));
+    div#grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
     }
 
     div#beBopSquare {
@@ -493,5 +548,9 @@ a:focus {
     }
     video#mtv {
         display: none;
+    }
+
+    main#projects h1 {
+        display: unset;
     }
 }

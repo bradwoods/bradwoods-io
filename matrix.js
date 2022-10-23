@@ -1,6 +1,5 @@
 (function () {
-    const PARENT_ELEMENT_WIDTH_PX = 220;
-    const CHAR_COUNT = 17;
+    const parentElem = document.querySelector("#matrix");
     const COL_COUNT = 8;
 
     const speedMS = {
@@ -12,12 +11,8 @@
         min: 0,
     };
 
-    const opacities = [
-        ...Array(CHAR_COUNT).fill(0),
-        ...Array(CHAR_COUNT)
-            .fill(null)
-            .map((_, i) => 1 - i / CHAR_COUNT),
-    ];
+    let opacities;
+    let intervalId;
 
     function getRandom(min, max) {
         return Math.random() * (max - min) + min;
@@ -27,8 +22,8 @@
         return Math.floor(getRandom(0, max));
     }
 
-    function getColLeftPX() {
-        return getRandomInt(PARENT_ELEMENT_WIDTH_PX - 16);
+    function getColLeftPX(parentElemWidthPx) {
+        return getRandomInt(parentElemWidthPx - 16);
     }
 
     function getRandomChar() {
@@ -40,8 +35,8 @@
         return chars[index];
     }
 
-    function getChars() {
-        return Array(CHAR_COUNT)
+    function getChars(charCount) {
+        return Array(charCount)
             .fill(null)
             .map(() => getRandomChar());
     }
@@ -56,16 +51,16 @@
         return getRandom(min, max);
     }
 
-    function addCharsToCol(col) {
-        const chars = getChars();
+    function addCharsToCol(col, charCount) {
+        const chars = getChars(charCount);
         const colSpans = [];
 
         chars.forEach((char, i) => {
             const span = document.createElement("span");
-            span.innerText = char;
+            span.textContent = char;
             span.style.opacity = 0;
             colSpans.push(span);
-            col.appendChild(span);
+            col.append(span);
         });
 
         colSpans.reverse();
@@ -85,7 +80,7 @@
         let colOpacities = [...opacities];
 
         function start() {
-            setInterval(() => {
+            intervalId = setInterval(() => {
                 spans.forEach((span, i) => {
                     span.style.opacity = colOpacities[i] || 0;
                 });
@@ -101,21 +96,53 @@
         setTimeout(start, getDelayMS());
     }
 
-    const section = document.querySelector("#matrix");
-    // There always needs to be a column on the left & right edges
-    const colLefts = [
-        0,
-        212,
-        ...Array(COL_COUNT - 2)
-            .fill(null)
-            .map(() => getColLeftPX()),
-    ];
-    const cols = colLefts.map((left) => createCol(left));
-    const spans = cols.map((col) => addCharsToCol(col));
+    function createMatrix() {
+        const parentElemWidthPx = parentElem.getBoundingClientRect().width;
+        const charCount = Math.floor(parentElemWidthPx / 12);
 
-    spans.forEach((colSpans) => animateSpans(colSpans));
+        opacities = [
+            ...Array(charCount).fill(0),
+            ...Array(charCount)
+                .fill(null)
+                .map((_, i) => 1 - i / charCount),
+        ];
 
-    cols.forEach((col) => {
-        section.appendChild(col);
+        // There always needs to be a column on the left & right edges
+        const colLefts = [
+            0,
+            212,
+            ...Array(COL_COUNT - 2)
+                .fill(null)
+                .map(() => getColLeftPX(parentElemWidthPx)),
+        ];
+        const cols = colLefts.map((left) => createCol(left));
+        const spans = cols.map((col) => addCharsToCol(col, charCount));
+
+        spans.forEach((colSpans) => animateSpans(colSpans));
+
+        parentElem.replaceChildren(...cols);
+    }
+
+    function debounce(callback, waitMS = 200) {
+        let timeoutId;
+
+        return function (...args) {
+            const context = this;
+
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(() => {
+                callback.call(context, ...args);
+            }, waitMS);
+        };
+    }
+
+    const debouncedCreateMatrix = debounce(createMatrix);
+
+    debouncedCreateMatrix();
+
+    window.addEventListener("resize", () => {
+        clearInterval(intervalId);
+        debouncedCreateMatrix();
     });
 })();

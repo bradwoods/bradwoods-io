@@ -554,3 +554,17 @@ ul.links a:focus {
         display: unset;
     }
 }
+
+/* scrollbar ------------------------------------------- */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-text-default);
+    border: 2px solid var(--color-background);
+}

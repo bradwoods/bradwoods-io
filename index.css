@@ -513,7 +513,6 @@ ul.links a:focus {
 }
 
 /* MEDIA_QUERIES ---------------------------------------------------- */
-/* 3 * --grid-square-min-px */
 @media (max-width: 660px) {
     div#grid {
         grid-template-columns: repeat(2, 1fr);
@@ -545,8 +544,37 @@ ul.links a:focus {
     }
 }
 
-/* 2 * --grid-square-min-px */
 @media (max-width: 440px) {
+    .textLarge {
+        font-size: 29.1667px;
+        line-height: 33px;
+    }
+
+    .textLarge::before {
+        margin-bottom: -0.2297em;
+    }
+
+    .textLarge::after {
+        margin-top: -0.1817em;
+    }
+
+    .textSmall {
+        font-size: 18.0556px;
+        line-height: 25px;
+    }
+
+    .textSmall::before {
+        margin-bottom: -0.3563em;
+    }
+
+    .textSmall::after {
+        margin-top: -0.3083em;
+    }
+
+    header {
+        gap: var(--gap-large);
+    }
+
     div#grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 1fr);

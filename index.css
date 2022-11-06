@@ -154,7 +154,7 @@ div#grid {
 header {
     width: 100%;
     aspect-ratio: 1 / 1;
-    padding: var(--gap-small);
+    padding: 0 var(--gap-small);
 
     position: relative;
 
@@ -520,6 +520,10 @@ ul.links a:focus {
         grid-auto-flow: row dense;
     }
 
+    header {
+        padding: 0 var(--gap-large);
+    }
+
     div#beBopSquare {
         grid-column: 2;
     }
@@ -530,7 +534,7 @@ ul.links a:focus {
     }
 
     main#projects {
-        padding: 0 16px;
+        padding: 0 var(--gap-large);
     }
 
     main#projects h1 {
@@ -545,6 +549,11 @@ ul.links a:focus {
 }
 
 @media (max-width: 440px) {
+    :root {
+        --gap-small: 16px;
+        --gap-large: 24px;
+    }
+
     .textLarge {
         font-size: 29.1667px;
         line-height: 33px;
@@ -569,10 +578,6 @@ ul.links a:focus {
 
     .textSmall::after {
         margin-top: -0.3083em;
-    }
-
-    header {
-        gap: var(--gap-large);
     }
 
     div#grid {

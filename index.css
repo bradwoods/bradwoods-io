@@ -20,6 +20,7 @@
     --color-cta: #e3a23a;
     --color-border: #fff;
     --color-background: #101011;
+
     --gradient-background: radial-gradient(
         ellipse at center,
         #272829 0%,
@@ -497,6 +498,20 @@ ul.links a:focus {
     outline: 1px solid var(--color-cta);
 }
 
+/* scrollbar ------------------------------------------- */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-text-default);
+    border: 2px solid var(--color-background);
+}
+
 /* MEDIA_QUERIES ---------------------------------------------------- */
 /* 3 * --grid-square-min-px */
 @media (max-width: 660px) {
@@ -553,18 +568,4 @@ ul.links a:focus {
     main#projects h1 {
         display: unset;
     }
-}
-
-/* scrollbar ------------------------------------------- */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--color-background);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--color-text-default);
-    border: 2px solid var(--color-background);
 }

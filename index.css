@@ -41,7 +41,6 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
-    width: 100%;
     height: 100%;
 }
 
@@ -92,7 +91,6 @@ svg#defs {
 
 /* GRID --------------------------------------------- */
 body {
-    width: 100%;
     min-height: 100%;
 
     display: flex;

@@ -101,8 +101,6 @@ body {
 
     background: var(--gradient-background);
     background-attachment: fixed;
-
-    -webkit-font-smoothing: antialiased;
     overscroll-behavior: none;
 }
 

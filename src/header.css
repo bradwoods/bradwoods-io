@@ -1,0 +1,10 @@
+header {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--gap-large);
+}
+
+header p {
+    position: relative;
+    z-index: var(--z-index-crt-infront);
+}

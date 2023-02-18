@@ -1,0 +1,23 @@
+body {
+    min-height: 100%;
+
+    padding: 40px;
+    padding-top: calc(50vh + var(--gap-small));
+
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: var(--gap-small);
+    justify-content: end;
+    align-content: start;
+
+    font-family: monospace;
+    color: var(--color-text-dark);
+
+    background: radial-gradient(
+        ellipse at 60% 60%,
+        var(--blue-light) 0%,
+        var(--blue-dark) 50%
+    );
+    background-attachment: fixed;
+    overscroll-behavior: none;
+}

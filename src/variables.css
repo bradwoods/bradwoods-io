@@ -1,0 +1,29 @@
+:root {
+    --white-light: hsl(0, 0%, 90%);
+    --white-dark: hsl(0, 0%, 60%);
+    --red-light: hsl(7, 68%, 61%);
+    --red-dark: hsl(7, 58%, 54%);
+    --blue-light: hsl(210, 3%, 16%);
+    --blue-dark: hsl(240, 3%, 6%);
+
+    --color-text-light: var(--white-light);
+    --color-text-dark: var(--white-dark);
+    --color-hover: var(--white-light);
+
+    --color-cta: var(--red-dark);
+    --color-cta-hover: var(--red-light);
+
+    --color-focus: var(--white-dark);
+
+    --opacity-hover-sybling: 0.5;
+
+    --transition: all 80ms linear;
+
+    --gap-large: 32px;
+    --gap-small: 20px;
+
+    --z-index-edward: 1;
+    --z-index-vignette: 2;
+    --z-index-crt: 3;
+    --z-index-crt-infront: 4;
+}

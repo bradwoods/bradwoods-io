@@ -3,20 +3,16 @@
     <head>
         <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-KCM9PKZGW9"
+            src="https://www.googletagmanager.com/gtag/js?id=G-L5VTKMSYDT"
         ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-
             function gtag() {
                 dataLayer.push(arguments);
             }
-
             gtag("js", new Date());
 
-            gtag("config", "G-KCM9PKZGW9", {
-                page_path: window.location.pathname,
-            });
+            gtag("config", "G-L5VTKMSYDT");
         </script>
 
         <meta charset="utf-8" />
@@ -27,18 +23,24 @@
         <meta name="theme-color" content="#212023" />
         <title>Brad Woods</title>
 
-        <link href="index.css" rel="stylesheet" />
-        <script defer src="matrix.js"></script>
+        <link href="/src/reset.css" rel="stylesheet" />
+        <link href="/src/variables.css" rel="stylesheet" />
+        <link href="/src/text.css" rel="stylesheet" />
+        <link href="/src/body.css" rel="stylesheet" />
+        <link href="/src/line.css" rel="stylesheet" />
+        <link href="/src/edward.css" rel="stylesheet" />
+        <link href="/src/header.css" rel="stylesheet" />
+        <link href="/src/main.css" rel="stylesheet" />
+        <link href="/src/footer.css" rel="stylesheet" />
+        <link href="/src/crt.css" rel="stylesheet" />
+        <link href="/src/crtText.css" rel="stylesheet" />
+        <link href="/src/vignette.css" rel="stylesheet" />
+        <link href="/src/mediaQueries.css" rel="stylesheet" />
+
+        <script type="module" src="/src/scambleText.ts" defer></script>
+
         <link rel="canonical" href="https://bradwoods.io" />
         <link rel="manifest" href="manifest.json" />
-
-        <link
-            as="font"
-            crossorigin="anonymous"
-            href="fonts/Orbitron-VariableFont_wght.ttf"
-            rel="preload"
-            type="font/ttf"
-        />
 
         <link rel="icon" href="favicon.ico" sizes="any" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -76,226 +78,144 @@
         />
     </head>
     <body>
-        <div id="grid">
-            <header>
-                <h1 class="textLarge">BRAD WOODS</h1>
-                <p class="textSmall">Front-end Engineer</p>
-                <img
-                    alt="A samuari sword"
-                    class="secondary"
-                    src="images/killBill.webp"
-                />
-            </header>
-
-            <div class="square">
-                <img
-                    alt="The artist formally known as Prince"
-                    class="primary"
-                    id="prince"
-                    src="images/prince.webp"
-                />
-                <img
-                    alt="2 sci-fi helmets"
-                    class="secondary"
-                    id="daftPunk"
-                    src="images/daftPunk.webp"
-                />
-            </div>
-
-            <div id="beBopSquare" class="square">
-                <img
-                    alt="A silhouette of a girl leaning forward."
-                    class="primary"
-                    id="beBop"
-                    src="images/beBop.webp"
-                />
-                <img
-                    alt="A man in a telephone booth"
-                    class="secondary"
-                    id="brick"
-                    src="images/brick.webp"
-                />
-            </div>
-
-            <div class="square">
-                <section id="doom">
-                    <img
-                        alt="Portrait of a man from a video game."
-                        src="images/doom1.webp"
-                    />
-                    <img
-                        alt="Portrait of a man from a video game."
-                        src="images/doom2.webp"
-                    />
-                    <img
-                        alt="Portrait of a man from a video game."
-                        src="images/doom3.webp"
-                    />
-                </section>
-                <img
-                    id="aliens"
-                    alt="An industrial sign with a 'w' icon & Weyland-Yutani corp 'Building Better Worlds' written on it."
-                    src="images/aliens.webp"
-                />
-                <svg id="hud" aria-hidden="true" viewBox="0 0 220 220">
-                    <text x="0" y="12">X3</text>
-                    <text x="0" y="200">Ammo: 16</text>
-                    <text x="0" y="212">Health: 64%</text>
-                </svg>
-            </div>
-
-            <main id="projects">
-                <div class="textLayout">
-                    <h1 class="textSmall">PROJECTS</h1>
-                    <ul class="links">
-                        <li>
-                            <a
-                                class="textSmall cta"
-                                href="https://garden.bradwoods.io"
-                            >
-                                Digital Garden
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="textSmall"
-                                href="https://garden.bradwoods.io/blueprints/js-engine/basic"
-                            >
-                                V8 Engine
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="textSmall"
-                                href="https://7guis.bradwoods.io"
-                            >
-                                7GUIs
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="textSmall"
-                                href="https://git.bradwoods.io"
-                            >
-                                Git Time
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                class="textSmall"
-                                href="https://layout.bradwoods.io"
-                            >
-                                Layout Generator
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <svg aria-hidden="true" viewBox="0 0 220 220">
-                    <path
-                        d="
-                    M0,12 l0,-12 l12,0 
-                    M208,0 l12,0 l0,12
-                    M220,208 l0,12 l-12,0
-                    M12,220 l-12,0 l0,-12"
-                        stroke-width="3"
-                        fill="none"
-                        vector-effect="non-scaling-stroke"
-                    />
-                </svg>
-            </main>
-
-            <div class="square">
-                <section id="matrix"></section>
-                <img
-                    alt="Graffiti of a portrait & words 'you are not a beautiful and unique snowflake'"
-                    class="secondary"
-                    src="images/fightClub.webp"
-                />
-            </div>
-
-            <div id="mtvSquare" class="square">
-                <video
-                    autoplay
-                    class="primary"
-                    id="mtv"
-                    width="100%"
-                    height="100%"
-                    muted
-                    loop
-                >
-                    <source src="videos/mtv.mp4" type="video/mp4" />
-                    <p>An astronaut planting the MTV flag on the moon</p>
-                </video>
-                <img
-                    alt="2 people holding a can of Jolt Cola"
-                    class="secondary"
-                    id="hackers"
-                    src="images/hackers.webp"
-                />
-                <div class="vignette"></div>
-            </div>
-
-            <div class="square johnnyCab">
-                <section class="johnnyCab">
-                    <img
-                        alt="A sci-fi robot taxi driver with no lower body."
-                        src="images/johnnyCab.webp"
-                    />
-                    <img alt="" src="images/johnnyCabLights1.webp" />
-                    <img alt="" src="images/johnnyCabLights2.webp" />
-                </section>
-                <img
-                    alt="A man shooting a laser beam out of his eyes & a robot reaching for him."
-                    id="xMen"
-                    src="images/xMen.webp"
-                />
-            </div>
-
-            <footer>
-                <ul class="links">
-                    <li>
-                        <a
-                            class="textSmall"
-                            href="https://twitter.com/bradwoodsio"
-                        >
-                            Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            class="textSmall"
-                            href="https://linkedin.com/in/brad-woods"
-                        >
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            class="textSmall"
-                            href="https://github.com/bradwoods"
-                        >
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            class="textSmall"
-                            href="https://www.youtube.com/channel/UCZ0KPaLz2U4SjKVAkXHJ-iQ"
-                        >
-                            YouTube
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            class="textSmall"
-                            href="mailto:brad@bradwoods.io?Subject=bradwoods.io - enquiry"
-                        >
-                            Email
-                        </a>
-                    </li>
-                </ul>
-                <img aria-hidden="true" alt="" src="images/toastie.webp" />
-            </footer>
-        </div>
+        <div id="crt"></div>
+        <div id="vignette"></div>
+        <div id="line"></div>
+        <img
+            alt="Edward from Cowboy Bebop"
+            id="edward"
+            src="images/edward.svg"
+        />
+        <header>
+            <h1 class="textLarge crtText">Brad Woods</h1>
+            <p class="textSmall">Front-end Engineer</p>
+        </header>
+        <main>
+            <h2 class="textSmall crtText">Side-Projects</h2>
+            <ul class="links">
+                <li>
+                    <a  href="https://garden.bradwoods.io">
+                        <span class="textSmall">Digital Garden</span>
+                    </a>
+                </a>
+                </li>
+                <li>
+                    <a href="https://garden.bradwoods.io/blueprints/js-engine/basic">
+                        <span class="textSmall">V8 Engine</span>
+                    </a>
+                </li>
+                <li>
+                    <a  href="https://layout.bradwoods.io">
+                        <span class="textSmall">CSS Layout Generator</span>
+                    </a>
+                </li>
+                <li>
+                    <a  href="https://7guis.bradwoods.io">
+                        <span class="textSmall">7GUIs</span>
+                    </a>
+                </li>
+                <li>
+                    <a  href="https://git.bradwoods.io">
+                        <span class="textSmall">Git Time</span>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <ul>
+                <li>
+                    <a href="https://github.com/bradwoods">
+                        <svg viewBox="0 0 24 24">
+                            <title>GitHub</title>
+                            <path
+                                fillRule="evenodd"
+                                d="m12,.59C5.37.59,0,5.97,0,12.59,0,17.89,3.44,22.39,8.21,23.98c.6.11.82-.26.82-.58,0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73,1.2.08,1.84,1.24,1.84,1.24,1.07,1.83,2.81,1.3,3.49,1,.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93,0-1.31.47-2.38,1.24-3.22-.12-.3-.54-1.52.12-3.18,0,0,1.01-.32,3.3,1.23.96-.27,1.98-.4,3-.4,1.02,0,2.05.14,3,.4,2.29-1.55,3.3-1.23,3.3-1.23.65,1.65.24,2.87.12,3.18.77.84,1.23,1.91,1.23,3.22,0,4.61-2.81,5.62-5.48,5.92.43.37.81,1.1.81,2.22,0,1.6-.01,2.9-.01,3.29,0,.32.22.69.83.58,4.76-1.59,8.2-6.08,8.2-11.38C24,5.97,18.63.59,12,.59Z"
+                                vectorEffect="non-scaling-stroke"
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/bradwoodsio">
+                        <svg viewBox="0 0 24 24">
+                            <title>Twitter</title>
+                            <path
+                                d="m24,6.8c-.88.39-1.83.66-2.83.78,1.02-.61,1.8-1.57,2.16-2.72-.95.56-2.01.97-3.13,1.19-.9-.96-2.18-1.55-3.59-1.55-2.72,0-4.92,2.2-4.92,4.92,0,.39.04.76.13,1.12-4.09-.21-7.72-2.17-10.15-5.14-.42.73-.67,1.57-.67,2.48,0,1.71.87,3.22,2.19,4.1-.81-.03-1.57-.25-2.23-.62,0,.02,0,.04,0,.06,0,2.39,1.7,4.38,3.95,4.83-.41.11-.85.17-1.3.17-.32,0-.63-.03-.93-.09.63,1.96,2.44,3.38,4.6,3.42-1.69,1.32-3.81,2.11-6.12,2.11-.4,0-.79-.02-1.17-.07,2.18,1.4,4.77,2.21,7.55,2.21,9.06,0,14.01-7.5,14.01-14.01,0-.21,0-.43-.01-.64.96-.69,1.8-1.56,2.46-2.55h0Z"
+                                vectorEffect="non-scaling-stroke"
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/brad-woods/">
+                        <svg viewBox="0 0 24 24">
+                            <title>LinkedIn</title>
+                            <path 
+                                d="m24,24.02v-8.82c0-4.72-2.54-6.92-5.92-6.92-2.73,0-3.95,1.49-4.64,2.54v-2.18h-5.14c.07,1.44,0,15.38,0,15.38h5.14v-8.59c0-.46.03-.92.17-1.25.37-.92,1.22-1.87,2.64-1.87,1.86,0,2.61,1.41,2.61,3.48v8.23h5.14Z" 
+                                vectorEffect="non-scaling-stroke"
+                            />
+                            <rect 
+                                x=".3" y="8.64" width="5.14" height="15.38" 
+                                vectorEffect="non-scaling-stroke"
+                            />
+                            <path 
+                                d="m2.91,1.22C1.15,1.22,0,2.37,0,3.88s1.12,2.66,2.84,2.66h.03c1.79,0,2.91-1.18,2.91-2.66-.03-1.51-1.12-2.66-2.88-2.66Z" 
+                                vectorEffect="non-scaling-stroke"
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@bradwoodsio">
+                        <svg viewBox="0 0 24 24">
+                            <title>YouTube</title>
+                            <path
+                                d="m23.5,9.82c-.28-1.03-1.09-1.85-2.12-2.12-1.87-.5-9.38-.5-9.38-.5,0,0-7.51,0-9.38.5-1.03.28-1.85,1.09-2.12,2.12-.5,1.87-.5,5.78-.5,5.78,0,0,0,3.91.5,5.78.28,1.03,1.09,1.85,2.12,2.12,1.87.5,9.38.5,9.38.5,0,0,7.51,0,9.38-.5,1.03-.28,1.85-1.09,2.12-2.12.5-1.87.5-5.78.5-5.78,0,0,0-3.91-.5-5.78Zm-13.9,9.38v-7.2l6.24,3.6-6.24,3.6Z"
+                                vectorEffect="non-scaling-stroke" 
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@bradwoodsio">
+                        <svg viewBox="0 0 24 24">
+                            <title>TikTok</title>
+                            <path 
+                                d="m19.34,4.81c-1.29-.84-2.23-2.19-2.52-3.76-.06-.34-.1-.69-.1-1.05h-4.13v16.54c-.08,1.85-1.6,3.34-3.47,3.34-.58,0-1.13-.15-1.61-.4-1.1-.58-1.86-1.74-1.86-3.07,0-1.91,1.56-3.47,3.47-3.47.36,0,.7.06,1.02.16v-4.21c-.34-.05-.68-.07-1.02-.07-4.19,0-7.59,3.41-7.59,7.59,0,2.57,1.28,4.84,3.24,6.22,1.23.87,2.73,1.38,4.35,1.38,4.19,0,7.59-3.41,7.59-7.59v-8.39c1.62,1.16,3.6,1.85,5.74,1.85v-4.13c-1.15,0-2.23-.34-3.13-.93Z" 
+                                vectorEffect="non-scaling-stroke" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.patreon.com/bradwoods">
+                        <svg viewBox="0 0 24 24">
+                            <title>Patreon</title>
+                            <path d="m14.74,1.92c-4.57,0-8.28,3.72-8.28,8.29s3.72,8.26,8.28,8.26,8.26-3.71,8.26-8.26S19.3,1.92,14.74,1.92Z" vectorEffect="non-scaling-stroke" />
+                            <path d="m0,24h4.04V1.92H0v22.08Z" vectorEffect="non-scaling-stroke" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ko-fi.com/bradwoods">
+                        <svg viewBox="0 0 24 24">
+                            <title>KoFi</title>
+                            <path 
+                                d="m23.88,13.09v-.04c-.26-1.46-1.09-2.77-2.3-3.62-1.04-.71-2.26-1.09-3.52-1.09H.87C.38,8.38,0,8.78,0,9.27v12.26c.06,1.42,1.27,2.53,2.69,2.47h1.48s4.17,0,4.17,0h0s5.77,0,5.77,0c.18,0,.36-.03.54-.06,1.63-.48,2.66-2.08,2.42-3.76,4.45.25,7.59-2.9,6.8-7.07Zm-5.01,4.04c-.57.07-1.15.07-1.72,0v-5.78h1.16c1.43-.04,2.62,1.08,2.67,2.51,0,.07,0,.13,0,.2.16,1.41-.74,2.72-2.11,3.08Z" 
+                                vectorEffect="non-scaling-stroke" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="mailto:brad@bradwoods.io?Subject=bradwoods.io - enquiry"
+                    >
+                        <svg viewBox="0 0 24 24">
+                            <title>Email</title>
+                            <path d="m3.2,6H1v2.25h.01v9h-.01v6.75h22V6H3.2Zm17.8,5l-9,6L3,11v-3l9,6,9-6v3Z" vectorEffect="non-scaling-stroke" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>

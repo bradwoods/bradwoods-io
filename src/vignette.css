@@ -6,13 +6,12 @@
     right: 0;
     z-index: var(--z-index-vignette);
 
-    background: radial-gradient(
-        ellipse,
-        hsla(200, 19%, 18%, 0) 84%,
-        hsla(200, 19%, 4%, 1)
-    );
-    box-shadow: inset 0 0 228px hsla(0, 0%, 2%, 0.25),
+    /* prettier-ignore */
+    box-shadow: 
+        inset 0 0 228px hsla(0, 0%, 2%, 0.25),
+        inset 0 0 128px hsl(0, 0%, 2%),
         inset 0 0 128px hsl(0, 0%, 2%);
 
     pointer-events: none;
+    mix-blend-mode: multiply;
 }

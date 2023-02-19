@@ -9,9 +9,9 @@
         gap: 40px;
 
         background: radial-gradient(
-            ellipse at 10% 50%,
+            ellipse at 35% 60%,
             var(--blue-light) 0%,
-            var(--blue-dark) 60%
+            var(--blue-dark) 55%
         );
     }
 

@@ -10,7 +10,7 @@ body {
     justify-content: end;
     align-content: start;
 
-    font-family: monospace;
+    font-family: "Courier", monospace;
     color: var(--color-text-dark);
 
     background: radial-gradient(

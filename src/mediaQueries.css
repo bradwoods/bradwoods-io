@@ -53,4 +53,8 @@
     img#edward {
         transform: translateX(-120px);
     }
+
+    footer ul li:nth-child(5) ~ li {
+        display: none;
+    }
 }

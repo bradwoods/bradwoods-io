@@ -3,7 +3,7 @@
     height: 1px;
 
     position: absolute;
-    top: 50%;
+    top: var(--top-line);
     left: 0;
 
     border-top: 1px dashed var(--color-text-dark);

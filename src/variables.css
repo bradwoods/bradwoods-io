@@ -22,6 +22,8 @@
     --gap-large: 32px;
     --gap-small: 24px;
 
+    --top-line: 50%;
+
     --z-index-edward: 1;
     --z-index-vignette: 2;
     --z-index-crt: 3;

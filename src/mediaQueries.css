@@ -16,7 +16,15 @@
     }
 
     #line {
-        display: none;
+        --top-line: 350px;
+
+        width: 1px;
+        height: calc(100% - var(--top-line));
+    
+        left: 16px;
+    
+        border-top: none;
+        border-left: 1px dashed var(--color-text-light);
     }
 
     img#edward {
@@ -52,6 +60,10 @@
 
     img#edward {
         transform: translateX(-120px);
+    }
+
+    #line {
+        --top-line: 300px;
     }
 
     footer ul li:nth-child(5) ~ li {

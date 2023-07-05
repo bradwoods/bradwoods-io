@@ -1,6 +1,8 @@
 body {
     min-height: 100%;
 
+    position: relative;
+
     padding: 40px;
     padding-top: calc(50vh + var(--gap-small));
 

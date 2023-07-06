@@ -7,12 +7,6 @@
         justify-content: unset;
         align-content: start;
         gap: 64px;
-
-        background: radial-gradient(
-            ellipse at 35% 60%,
-            var(--blue-light) 0%,
-            var(--blue-dark) 55%
-        );
     }
 
     #line {
@@ -24,7 +18,8 @@
         left: 16px;
     
         border-top: none;
-        border-left: 1px dashed var(--color-text-light);
+        border-left: 1px dotted var(--color-line);
+        z-index: var(--z-index-crt-infront);
     }
 
     img#edward {

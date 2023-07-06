@@ -15,7 +15,7 @@ body {
     font-family: "Courier", monospace;
     color: var(--color-text-dark);
 
-    background: radial-gradient(
+    background-image: radial-gradient(
         ellipse at 60% 60%,
         var(--blue-light) 0%,
         var(--blue-dark) 65%

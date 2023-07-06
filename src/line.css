@@ -6,5 +6,5 @@
     top: var(--top-line);
     left: 0;
 
-    border-top: 1px dashed var(--color-text-dark);
+    border-top: 1px dotted var(--color-line);
 }

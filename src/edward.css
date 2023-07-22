@@ -64,14 +64,21 @@
     }
 }
 
-img#edward {
-    width: 40%;
+#edwardLayout {
+    width: 100%;
 
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(calc(-50% - 40px));
     z-index: var(--z-index-edward);
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+#edwardLayout img {
+    width: 40%;
 
     animation-name: flicker;
     animation-duration: 0.5s;

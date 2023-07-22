@@ -1,6 +1,6 @@
 @media (max-width: 1328px) {
-    img#edward {
-        left: -80px;
+    #edwardLayout img {
+        transform: translateX(-80px);
     }
 }
 
@@ -10,7 +10,7 @@
     }
     
     body {
-        padding: 180px 32px 64px 120px;
+        padding: 180px 0 64px 120px;
 
         display: flex;
         flex-direction: column;
@@ -53,13 +53,19 @@
         color: var(--color-text-light);
     }
 
-    img#edward {
+    #edwardLayout {
         top: 0;
         left: unset;
         right: 0;
+        transform: none;
 
-        transform: scaleX(-1);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #edwardLayout img {
         width: 360px;
+        transform: scaleX(-1);
     }
 
     header {
@@ -95,7 +101,7 @@
         height: calc(100% - 240px);
     }
 
-    img#edward {
+    #edwardLayout img {
         transform: translateX(180px) scaleX(-1);
     }
 }

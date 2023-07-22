@@ -1,37 +1,70 @@
-@media (max-width: 1040px) {
-    body {
-        padding: 32px;
-        padding-top: 308px;
-        flex-direction: column;
+@media (max-width: 1328px) {
+    img#edward {
+        left: -80px;
+    }
+}
 
+@media (max-width: 1040px) {
+    a, a::after, footer a::after {
+        width: 100%;
+    }
+    
+    body {
+        padding: 180px 32px 64px 120px;
+
+        display: flex;
+        flex-direction: column;
         justify-content: unset;
         align-content: start;
         gap: 64px;
     }
 
     #line {
-        --top-line: 350px;
+        width: var(--height-line);
+        height: calc(100% - 200px);
+    
+        left: 28px;
+        top: unset;
+        transform: unset;
+        bottom: 0;
+    
+        z-index: var(--z-index-infront-of-crt-effect);
+    }
 
-        width: 1px;
-        height: calc(100% - var(--top-line));
-    
-        left: 16px;
-    
-        border-top: none;
-        border-left: 1px dotted var(--color-line);
-        z-index: var(--z-index-crt-infront);
+    img#bradWoodsDesktop {
+        display: none;
+    }
+
+    header {
+        gap: 0px;
+    }
+
+    img#bradWoodsMobile {
+        display: unset;
+        position: sticky;
+        top: 0px;
+        z-index: var(--z-index-infront-of-crt-effect);
+
+        transform-origin: bottom left;
+        transform: rotate(90deg) translate(28px, 74px);;
+    }
+
+    p#job {
+        color: var(--color-text-light);
     }
 
     img#edward {
         top: 0;
-        transform: none;
+        left: unset;
+        right: 0;
+
+        transform: scaleX(-1);
         width: 360px;
     }
 
     header {
         flex-direction: column;
         align-items: unset;
-        gap: 20px;
     }
 
     main {
@@ -39,29 +72,25 @@
         align-items: unset;
     }
 
-    main ul {
+    main ul#projects {
         flex-direction: column;
     }
 
     footer ul {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 
 @media (max-width: 440px) {
     body {
-        padding-top: 260px;
-    }
-
-    img#edward {
-        transform: translateX(-120px);
+        padding-top: 220px;
     }
 
     #line {
-        --top-line: 300px;
+        height: calc(100% - 240px);
     }
 
-    footer ul li:nth-child(5) ~ li {
-        display: none;
+    img#edward {
+        transform: translateX(180px) scaleX(-1);
     }
 }

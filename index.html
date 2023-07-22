@@ -7,11 +7,12 @@
         ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
+
             function gtag() {
                 dataLayer.push(arguments);
             }
-            gtag("js", new Date());
 
+            gtag("js", new Date());
             gtag("config", "G-L5VTKMSYDT");
         </script>
 
@@ -20,7 +21,7 @@
 
         <meta name="description" content="Front-end engineer" />
         <meta name="author" content="Brad Woods" />
-        <meta name="theme-color" content="#212023" />
+        <meta name="theme-color" content="hsl(240, 3%, 6%)" />
         <title>Brad Woods</title>
 
         <link href="/src/reset.css" rel="stylesheet" />
@@ -33,9 +34,9 @@
         <link href="/src/main.css" rel="stylesheet" />
         <link href="/src/footer.css" rel="stylesheet" />
         <link href="/src/crt.css" rel="stylesheet" />
-        <link href="/src/crtText.css" rel="stylesheet" />
         <link href="/src/vignette.css" rel="stylesheet" />
         <link href="/src/mediaQueries.css" rel="stylesheet" />
+        <link href="/src/screenReaderOnly.css" rel="stylesheet" />
 
         <script type="module" src="/src/scambleText.ts" defer></script>
         <script type="module" src="/src/consoleLog.ts" defer></script>
@@ -61,7 +62,7 @@
         />
         <meta
             property="article:published_time"
-            content="2022-06-06T10:00:00+00:00"
+            content="2023-07-22T10:00:00+00:00"
         />
 
         <meta name="twitter:title" content="Brad Woods" />
@@ -79,21 +80,27 @@
         />
     </head>
     <body>
-        <div id="crt"></div>
-        <div id="vignette"></div>
         <div id="line"></div>
+        <img 
+            alt="" 
+            id="bradWoodsMobile" 
+            height="29" 
+            src="images/bradWoods.png" 
+            width="255" 
+        />
         <img
             alt="Edward from Cowboy Bebop"
             id="edward"
             src="images/edward.svg"
         />
         <header>
-            <h1 class="siteH1 crtText">Brad Woods</h1>
-            <p class="textSmall">Front-end Engineer</p>
+            <h1 class="screenReaderOnly">Brad Woods</h1>
+            <img alt="" id="bradWoodsDesktop" height="29" src="images/bradWoods.png" width="255" />
+            <p id="job" class="textLarge bold">Front-end Engineer</p>
         </header>
         <main>
-            <h2 class="textSmall crtText">Side-Projects</h2>
-            <ul class="links">
+            <h2 class="textLarge bold highlight">Projects:</h2>
+            <ul id="projects">
                 <li>
                     <a  href="https://garden.bradwoods.io">
                         <span class="textSmall">Digital Garden</span>
@@ -208,5 +215,7 @@
                 </li>
             </ul>
         </footer>
+        <div id="vignette"></div>
+        <div id="crt"></div>
     </body>
 </html>

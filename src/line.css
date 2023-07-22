@@ -1,10 +1,12 @@
 #line {
     width: 100%;
-    height: 1px;
+    height: var(--height-line);
 
     position: absolute;
-    top: var(--top-line);
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
+    z-index: var(--z-index-line);
 
-    border-top: 1px dotted var(--color-line);
+    background: var(--color-line);
 }

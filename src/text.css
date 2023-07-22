@@ -1,19 +1,19 @@
 /* https://typescale.com/ - Marjor Third */
 /* https://seek-oss.github.io/capsize/ */
 .textLarge {
-    font-size: 24.506px;
-    line-height: 24px;
+    font-size: 19.2547px;
+    line-height: 18px;
 }
 
 .textLarge::before {
     content: "";
-    margin-bottom: -0.1845em;
+    margin-bottom: -0.1622em;
     display: table;
 }
 
 .textLarge::after {
     content: "";
-    margin-top: -0.2236em;
+    margin-top: -0.2013em;
     display: table;
 }
 
@@ -34,15 +34,10 @@
     display: table;
 }
 
-h1 {
-    text-transform: uppercase;
-    transform: translateX(-1px);
-    letter-spacing: 0.1em;
-    color: var(--color-text-light);
+.bold {
+    font-weight: 700;
 }
 
-h2 {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+.highlight {
     color: var(--color-text-light);
 }

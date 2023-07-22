@@ -70,7 +70,7 @@ img#edward {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% - 40px));
     z-index: var(--z-index-edward);
 
     animation-name: flicker;

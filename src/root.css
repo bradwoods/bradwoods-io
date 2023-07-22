@@ -1,34 +1,33 @@
 :root {
     --white-light: hsl(0, 0%, 90%);
-    --white-med: hsl(0, 0%, 60%);
-    --white-dark: hsl(0, 0%, 40%);
+    --white-dark: hsl(0, 0%, 60%);
     --red-light: hsl(7, 68%, 61%);
     --red-dark: hsl(7, 58%, 54%);
-    --blue-light: hsl(210, 3%, 16%);
+    --blue-light: hsl(210, 2%, 16%);
     --blue-dark: hsl(240, 3%, 6%);
 
     --color-text-light: var(--white-light);
-    --color-text-dark: var(--white-med);
+    --color-text-dark: var(--white-dark);
     --color-hover: var(--white-light);
-
     --color-cta: var(--red-dark);
     --color-cta-hover: var(--red-light);
+    --color-line: var(--white-light);
+    --color-focus: var(--white-light);
 
-    --color-line: var(--white-dark);
+    --color-gradient-center: var(--blue-light);
+    --color-gradient-outer: var(--blue-dark);
 
-    --color-focus: var(--white-med);
+    --height-line: 64px;
+
+    --gap: 32px;
+
+    --z-index-line: -1;
+    --z-index-edward: 1;
+    --z-index-vignette: 2;
+    --z-index-crt-effect: 3;
+    --z-index-infront-of-crt-effect: 4;
 
     --opacity-hover-sybling: 0.5;
 
     --transition: all 80ms linear;
-
-    --gap-large: 32px;
-    --gap-small: 24px;
-
-    --top-line: 50%;
-
-    --z-index-edward: 1;
-    --z-index-vignette: 2;
-    --z-index-crt: 3;
-    --z-index-crt-infront: 4;
 }

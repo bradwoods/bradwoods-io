@@ -1,9 +1,6 @@
 footer ul {
     display: flex;
-    gap: var(--gap-large);
-
-    position: relative;
-    z-index: var(--z-index-crt-infront);
+    gap: var(--gap);
 }
 
 footer a {
@@ -15,7 +12,7 @@ footer a::after {
     content: "";
 
     width: 48px;
-    height: 32px;
+    height: 44px;
 
     position: absolute;
     top: 50%;

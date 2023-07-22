@@ -1,41 +1,40 @@
 main {
     display: flex;
     align-items: flex-end;
-    gap: var(--gap-large);
+    gap: var(--gap);
 }
 
-main ul {
+main ul#projects {
     display: flex;
-    gap: var(--gap-large);
+    gap: var(--gap);
 }
 
-main li {
+main ul#projects li {
     display: flex;
 }
 
-main li:first-child a {
+main ul#projects li:first-child a {
     color: var(--color-cta);
 }
 
-main li:first-child a:hover {
+main ul#projects li:first-child a:hover {
     color: var(--color-cta-hover);
 }
 
-main a {
+main ul#projects a {
     position: relative;
     transition: var(--transition);
-    z-index: var(--z-index-crt-infront);
 }
 
-main a:hover {
+main ul#projects a:hover {
     color: var(--color-hover);
 }
 
-main a::after {
+main ul#projects a::after {
     content: "";
 
     width: calc(100% + 32px);
-    height: 40px;
+    height: 44px;
 
     position: absolute;
     top: 50%;

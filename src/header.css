@@ -1,10 +1,14 @@
 header {
     display: flex;
     align-items: flex-end;
-    gap: var(--gap-large);
+    gap: var(--gap);
 }
 
-header p {
-    position: relative;
-    z-index: var(--z-index-crt-infront);
+img#bradWoodsMobile {
+    display: none;
+}
+
+p#job {
+    color: var(--color-gradient-center);
+    transform: translateY(-3px);
 }

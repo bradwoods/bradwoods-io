@@ -4,11 +4,11 @@ body {
     position: relative;
 
     padding: 40px;
-    padding-top: calc(50vh + var(--gap-small));
+    padding-top: calc(50vh - 12px);
 
     display: grid;
     grid-template-rows: repeat(3, auto);
-    gap: var(--gap-small);
+    gap: var(--gap);
     justify-content: end;
     align-content: start;
 
@@ -17,8 +17,8 @@ body {
 
     background-image: radial-gradient(
         ellipse at 60% 60%,
-        var(--blue-light) 0%,
-        var(--blue-dark) 65%
+        var(--color-gradient-center) 0%,
+        var(--color-gradient-outer) 65%
     );
     background-attachment: fixed;
     overscroll-behavior: none;

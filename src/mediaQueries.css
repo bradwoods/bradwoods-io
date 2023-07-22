@@ -45,7 +45,7 @@
         transform: rotate(90deg) translate(28px, 74px);;
     }
 
-    p#job {
+    p#dropHead {
         color: var(--color-text-light);
         transform: none;
     }
@@ -73,6 +73,10 @@
     main {
         flex-direction: column;
         align-items: unset;
+    }
+
+    #colon {
+        display: none;
     }
 
     main ul#projects {

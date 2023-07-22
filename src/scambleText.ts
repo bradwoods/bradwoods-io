@@ -1,22 +1,14 @@
 // https://www.youtube.com/watch?v=W5oawMJaXbU
 
-const lettersLowerCase = "abcdefghijklmnopqrstuvwxyz";
-const lettersUpperCase = lettersLowerCase.toUpperCase();
+const letters = "abcdefghijklmnopqrstuvwxyz";
 
-const h1 = document.querySelector("h1");
-const h2 = document.querySelector("h2");
+const dropHead: HTMLParagraphElement | null =
+    document.querySelector("#dropHead");
 const description: HTMLParagraphElement | null =
     document.querySelector("header p");
 const projects = document.querySelectorAll("main span");
 
-function scrambleText({
-    element,
-    isUpperCase = false,
-}: {
-    element: HTMLElement;
-    isUpperCase?: boolean;
-}) {
-    const letters = isUpperCase ? lettersUpperCase : lettersLowerCase;
+function scrambleText(element: HTMLElement) {
     const originalText = element.innerText;
 
     let iterations = 0;
@@ -39,13 +31,12 @@ function scrambleText({
     }, 30);
 }
 
-if (h1 && h2 && description && projects) {
-    scrambleText({ element: h1, isUpperCase: true });
-    scrambleText({ element: h2, isUpperCase: true });
-    scrambleText({ element: description });
+if (dropHead && description && projects) {
+    scrambleText(dropHead);
+    scrambleText(description);
 
     projects.forEach((project) => {
-        scrambleText({ element: project as HTMLElement });
+        scrambleText(project as HTMLElement);
     });
 }
 

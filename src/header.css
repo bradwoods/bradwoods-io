@@ -8,7 +8,7 @@ img#bradWoodsMobile {
     display: none;
 }
 
-p#job {
+p#dropHead {
     color: var(--color-gradient-center);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }

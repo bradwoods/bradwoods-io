@@ -102,6 +102,6 @@
     }
 
     #edwardLayout img {
-        transform: translateX(180px) scaleX(-1);
+        transform: translateX(140px) scaleX(-1);
     }
 }

@@ -35,10 +35,6 @@
         display: none;
     }
 
-    header {
-        gap: 0px;
-    }
-
     img#bradWoodsMobile {
         display: unset;
         position: sticky;
@@ -51,6 +47,7 @@
 
     p#job {
         color: var(--color-text-light);
+        transform: none;
     }
 
     #edwardLayout {

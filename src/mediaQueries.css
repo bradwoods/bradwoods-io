@@ -79,6 +79,11 @@
     footer ul {
         flex-direction: column;
     }
+
+    footer a::after {
+        width: calc(100% + 32px);
+        height: 48px;
+    }
 }
 
 @media (max-width: 440px) {

@@ -40,6 +40,9 @@ main ul#projects a::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    /* For visualizing click / tap target */
+    /* outline: 1px solid blue; */
 }
 
 main:has(a:hover) a:not(a:hover) {

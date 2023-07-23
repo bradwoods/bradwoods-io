@@ -4,11 +4,7 @@
     }
 }
 
-@media (max-width: 1040px) {
-    a, a::after, footer a::after {
-        width: 100%;
-    }
-    
+@media (max-width: 1040px) {    
     body {
         padding: 180px 0 64px 120px;
 
@@ -77,6 +73,10 @@
 
     #colon {
         display: none;
+    }
+
+    main a, main a::after {
+        width: 100%;
     }
 
     main ul#projects {

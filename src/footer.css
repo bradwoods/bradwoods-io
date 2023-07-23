@@ -27,9 +27,6 @@ footer svg {
     width: 18px;
     aspect-ratio: 1;
 
-    position: relative;
-    z-index: 3;
-
     fill: var(--color-text-dark);
     transition: var(--transition);
 }

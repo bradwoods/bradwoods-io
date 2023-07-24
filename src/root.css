@@ -19,6 +19,8 @@
 
     --height-line: 64px;
 
+    --paddingTapTargetMobile: 16px;
+
     --gap: 32px;
 
     --z-index-line: -1;

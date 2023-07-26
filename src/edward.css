@@ -77,8 +77,10 @@
     pointer-events: none;
 }
 
-#edwardLayout img {
+#edwardLayout svg {
     width: 40%;
+
+    fill: var(--red-dark);
 
     animation-name: flicker;
     animation-duration: 0.5s;

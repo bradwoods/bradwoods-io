@@ -2,14 +2,15 @@
     --white-light: hsl(0, 0%, 90%);
     --white-dark: hsl(0, 0%, 60%);
     --red-light: hsl(7, 68%, 61%);
-    --red-dark: hsl(7, 58%, 54%);
+    --red-med: hsl(7, 58%, 54%);
+    --red-dark: hsl(0, 100%, 34%);
     --blue-light: hsl(210, 2%, 16%);
     --blue-dark: hsl(240, 3%, 6%);
 
     --color-text-light: var(--white-light);
     --color-text-dark: var(--white-dark);
     --color-hover: var(--white-light);
-    --color-cta: var(--red-dark);
+    --color-cta: var(--red-med);
     --color-cta-hover: var(--red-light);
     --color-line: var(--white-light);
     --color-focus: var(--white-light);

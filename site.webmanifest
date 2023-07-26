@@ -1,0 +1,19 @@
+{
+    "name": "Brad Woods",
+    "short_name": "Brad Woods",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "hsl(7, 58%, 54%)",
+    "background_color": "hsl(240, 3%, 6%)",
+    "display": "standalone"
+}

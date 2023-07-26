@@ -79,17 +79,25 @@
         flex-direction: column;
     }
 
-    ul#projects a {
+    main ul#projects a {
         width: 100%;
     }
 
-    main ul#projects a::after {
+    main a::after {
         width: calc(100% + var(--paddingTapTargetMobile));
         transform: translate(calc(-50% - var(--paddingTapTargetMobile)), -50%);
     }
 
+    main:has(a:hover) a:not(a:hover) {
+        opacity: 1;
+    }
+
     footer ul {
         flex-direction: column;
+    }
+
+    footer:has(a:hover) a:not(a:hover) {
+        opacity: 1;
     }
 
     footer a::after {

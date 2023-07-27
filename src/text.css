@@ -3,18 +3,18 @@
 
 .textLarge {
     font-size: 22.7556px;
-    line-height: 23px;
+    line-height: 27px;
 }
 
 .textLarge::before {
     content: "";
-    margin-bottom: -0.2002em;
+    margin-bottom:  -0.2881em;
     display: table;
 }
 
 .textLarge::after {
     content: "";
-    margin-top: -0.2393em;
+    margin-top: -0.3271em;
     display: table;
 }
 

@@ -43,18 +43,18 @@
 
     p#dropHead {
         font-size: 22.7556px;
-        line-height: 23px;
+        line-height: 27px;
 
         color: var(--color-text-light);
         transform: none;
     }
 
     p#dropHead::before {
-        margin-bottom: -0.2002em;
+        margin-bottom:  -0.2881em;
     }
     
     p#dropHead::after {
-        margin-top: -0.2393em;
+        margin-top: -0.3271em;
     }
 
     #edwardLayout {

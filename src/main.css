@@ -42,7 +42,7 @@ main ul#projects a::after {
     transform: translate(-50%, -50%);
 
     /* For visualizing click / tap target */
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 }
 
 main:has(a:hover) a:not(a:hover) {

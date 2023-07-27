@@ -6,7 +6,7 @@
 
 @media (max-width: 1080px) {    
     body {
-        padding: 180px 0 64px 120px;
+        padding: 180px 0 64px 100px;
 
         display: flex;
         flex-direction: column;
@@ -19,7 +19,7 @@
         width: var(--height-line);
         height: calc(100% - 200px);
     
-        left: 28px;
+        left: 18px;
         top: unset;
         transform: unset;
         bottom: 0;
@@ -38,12 +38,23 @@
         z-index: var(--z-index-infront-of-crt-effect);
 
         transform-origin: bottom left;
-        transform: rotate(90deg) translate(28px, 74px);;
+        transform: rotate(90deg) translate(28px, 66px);;
     }
 
     p#dropHead {
+        font-size: 22.7556px;
+        line-height: 23px;
+
         color: var(--color-text-light);
         transform: none;
+    }
+
+    p#dropHead::before {
+        margin-bottom: -0.2002em;
+    }
+    
+    p#dropHead::after {
+        margin-top: -0.2393em;
     }
 
     #edwardLayout {

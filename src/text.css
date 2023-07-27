@@ -1,17 +1,35 @@
-/* https://typescale.com/ - Marjor Third */
+/* https://typescale.com/ - Minor Third */
 /* https://seek-oss.github.io/capsize/ */
+
 .textLarge {
+    font-size: 22.7556px;
+    line-height: 23px;
+}
+
+.textLarge::before {
+    content: "";
+    margin-bottom: -0.2002em;
+    display: table;
+}
+
+.textLarge::after {
+    content: "";
+    margin-top: -0.2393em;
+    display: table;
+}
+
+.textMed {
     font-size: 19.2547px;
     line-height: 18px;
 }
 
-.textLarge::before {
+.textMed::before {
     content: "";
     margin-bottom: -0.1622em;
     display: table;
 }
 
-.textLarge::after {
+.textMed::after {
     content: "";
     margin-top: -0.2013em;
     display: table;

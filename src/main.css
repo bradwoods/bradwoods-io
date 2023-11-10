@@ -1,4 +1,7 @@
 main {
+    position: relative;
+    z-index: var(--z-index-infront-of-crt-effect);
+
     display: flex;
     align-items: flex-end;
     gap: var(--gap);

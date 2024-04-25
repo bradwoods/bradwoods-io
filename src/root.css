@@ -20,7 +20,8 @@
 
     --height-line: 64px;
 
-    --gap: 32px;
+    --gap-x: 32px;
+    --gap-y: 20px;
 
     --z-index-line: -1;
     --z-index-edward: 1;

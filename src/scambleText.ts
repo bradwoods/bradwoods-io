@@ -4,8 +4,7 @@ const letters = "abcdefghijklmnopqrstuvwxyz";
 
 const dropHead: HTMLParagraphElement | null =
     document.querySelector("#dropHead");
-const description: HTMLParagraphElement | null =
-    document.querySelector("header p");
+const lead: HTMLParagraphElement | null = document.querySelector("#lead");
 const projects = document.querySelectorAll("main span");
 
 function scrambleText(element: HTMLElement) {
@@ -31,9 +30,9 @@ function scrambleText(element: HTMLElement) {
     }, 30);
 }
 
-if (dropHead && description && projects) {
+if (dropHead && lead && projects) {
     scrambleText(dropHead);
-    scrambleText(description);
+    scrambleText(lead);
 
     projects.forEach((project) => {
         scrambleText(project as HTMLElement);

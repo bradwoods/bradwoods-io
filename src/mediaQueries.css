@@ -4,26 +4,29 @@
     }
 }
 
-@media (max-width: 1080px) {    
+@media (max-width: 1080px) {
+    :root {
+        --gap-y: 0;
+    }
+
     body {
-        padding: 180px 0 64px 100px;
+        padding: 180px 16px 64px 100px;
 
         display: flex;
         flex-direction: column;
         justify-content: unset;
         align-content: start;
-        gap: 64px;
     }
 
     #line {
         width: var(--height-line);
         height: calc(100% - 200px);
-    
+
         left: 18px;
         top: unset;
         transform: unset;
         bottom: 0;
-    
+
         z-index: var(--z-index-infront-of-crt-effect);
     }
 
@@ -38,10 +41,12 @@
         z-index: var(--z-index-infront-of-crt-effect);
 
         transform-origin: bottom left;
-        transform: rotate(90deg) translate(28px, 66px);;
+        transform: rotate(90deg) translate(28px, 66px);
     }
 
     p#dropHead {
+        margin-top: 28px;
+
         font-size: 22.7556px;
         line-height: 27px;
 
@@ -50,9 +55,9 @@
     }
 
     p#dropHead::before {
-        margin-bottom:  -0.2881em;
+        margin-bottom: -0.2881em;
     }
-    
+
     p#dropHead::after {
         margin-top: -0.3271em;
     }
@@ -78,20 +83,36 @@
     }
 
     main {
+        margin-top: 20px;
+    }
+
+    section#projects {
+        margin-top: 48px;
+
         flex-direction: column;
         align-items: unset;
+        gap: 24px;
+    }
+
+    section#projects ul a::after {
+        height: 48px;
     }
 
     #colon {
         display: none;
     }
 
-    main ul#projects {
+    section#projects ul {
         flex-direction: column;
+        gap: 32px;
     }
 
-    main:has(a:hover) a:not(a:hover) {
+    section#projects:has(a:hover) a:not(a:hover) {
         opacity: 1;
+    }
+
+    footer {
+        margin-top: 64px;
     }
 
     footer ul {

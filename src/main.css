@@ -1,57 +1,7 @@
 main {
-    position: relative;
-    z-index: var(--z-index-infront-of-crt-effect);
+    margin-top: 16px;
 
     display: flex;
-    align-items: flex-end;
-    gap: var(--gap);
-}
-
-main ul#projects {
-    display: flex;
-    gap: var(--gap);
-}
-
-main ul#projects li {
-    display: flex;
-}
-
-main ul#projects li:first-child a {
-    color: var(--color-cta);
-}
-
-main ul#projects li:first-child a:hover {
-    color: var(--color-cta-hover);
-}
-
-main ul#projects a {
-    position: relative;
-    transition: var(--transition);
-}
-
-main ul#projects a:hover {
-    color: var(--color-hover);
-}
-
-main ul#projects a::after {
-    content: "";
-
-    width: calc(100% + 32px);
-    height: 44px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    /* For visualizing click / tap target */
-    /* outline: 1px solid blue; */
-}
-
-main:has(a:hover) a:not(a:hover) {
-    opacity: var(--opacity-hover-sybling);
-}
-
-main a:focus-visible::after {
-    outline: 1px solid var(--color-focus);
+    flex-direction: column;
+    gap: var(--gap-y);
 }

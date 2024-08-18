@@ -13,7 +13,7 @@ body {
     align-content: start;
 
     font-family: "Courier", monospace;
-    color: var(--color-text-dark);
+    color: var(--color-text-med);
 
     background-image: radial-gradient(
         ellipse at 60% 60%,

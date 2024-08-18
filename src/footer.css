@@ -37,7 +37,7 @@ footer svg {
 }
 
 footer a:hover svg {
-    fill: var(--color-text-dark-hover);
+    fill: var(--color-text-med-hover);
 }
 
 footer:has(a:hover) a:not(a:hover) {

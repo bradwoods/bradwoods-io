@@ -1,6 +1,7 @@
 :root {
     --white-light: hsl(0, 0%, 90%);
-    --white-dark: hsl(0, 0%, 60%);
+    --white-med: hsl(0, 0%, 60%);
+    --white-dark: hsl(0, 0%, 45%);
     --red-light: hsl(7, 68%, 61%);
     --red-med: hsl(7, 58%, 54%);
     --red-dark: hsl(0, 100%, 34%);
@@ -8,7 +9,8 @@
     --blue-dark: hsl(240, 3%, 6%);
 
     --color-text-dark: var(--white-dark);
-    --color-text-dark-hover: var(--white-light);
+    --color-text-med: var(--white-med);
+    --color-text-med-hover: var(--white-light);
     --color-text-light: var(--white-light);
     --color-text-light-hover: var(--red-med);
 

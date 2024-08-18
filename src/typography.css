@@ -38,7 +38,3 @@
 .bold {
     font-weight: 700;
 }
-
-.highlight {
-    color: var(--color-text-light);
-}

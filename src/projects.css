@@ -16,21 +16,15 @@ section#projects ul li {
     display: flex;
 }
 
-section#projects ul li:first-child a {
-    color: var(--color-cta);
-}
-
-section#projects ul li:first-child a:hover {
-    color: var(--color-cta-hover);
-}
-
 section#projects ul a {
     position: relative;
+
+    color: var(--color-text-light);
     transition: var(--transition);
 }
 
 section#projects ul a:hover {
-    color: var(--color-hover);
+    color: var(--color-text-light-hover);
 }
 
 section#projects ul a::after {
@@ -42,7 +36,7 @@ section#projects ul a::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    translate: -50% -50%;
 
     /* For visualizing click / tap target */
     /* outline: 1px solid blue; */

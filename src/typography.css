@@ -2,8 +2,8 @@
 /* https://seek-oss.github.io/capsize/ */
 
 .textLarge {
-    font-size: 19.2547px;
-    line-height: 18px;
+    font-size: 1.9rem;
+    line-height: 1.8rem;
 }
 
 .textLarge::before {
@@ -19,8 +19,8 @@
 }
 
 .textMed {
-    font-size: 15.7538px;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 }
 
 .textMed::before {

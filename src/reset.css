@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+    min-width: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,11 +12,12 @@
 }
 
 html {
+    height: 100%;
+
+    font-size: calc(100% / 16 * 10);
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
-
-    height: 100%;
 }
 
 h1,

@@ -27,17 +27,17 @@
         <link href="/src/reset.css" rel="stylesheet" />
         <link href="/src/root.css" rel="stylesheet" />
         <link href="/src/typography.css" rel="stylesheet" />
-        <link href="/src/body.css" rel="stylesheet" />
-        <link href="/src/line.css" rel="stylesheet" />
-        <link href="/src/edward.css" rel="stylesheet" />
-        <link href="/src/header.css" rel="stylesheet" />
-        <link href="/src/main.css" rel="stylesheet" />
-        <link href="/src/projects.css" rel="stylesheet" />
-        <link href="/src/footer.css" rel="stylesheet" />
         <link href="/src/crt.css" rel="stylesheet" />
         <link href="/src/vignette.css" rel="stylesheet" />
-        <link href="/src/mediaQueries.css" rel="stylesheet" />
         <link href="/src/screenReaderOnly.css" rel="stylesheet" />
+
+        <link href="/src/landing/body.css" rel="stylesheet" />
+        <link href="/src/landing/line.css" rel="stylesheet" />
+        <link href="/src/landing/ed.css" rel="stylesheet" />
+        <link href="/src/landing/lead.css" rel="stylesheet" />
+        <link href="/src/landing/header.css" rel="stylesheet" />
+        <link href="/src/landing/footer.css" rel="stylesheet" />
+        <link href="/src/landing/projectsLink.css" rel="stylesheet" />
 
         <script type="module" src="/src/scambleText.ts" defer></script>
         <script type="module" src="/src/consoleLog.ts" defer></script>
@@ -73,16 +73,10 @@
     </head>
     <body>
         <div id="line"></div>
-        <img
-            alt=""
-            id="bradWoodsMobile"
-            height="29"
-            src="images/bradWoods.png"
-            width="255"
-        />
-        <!-- Using inline svg to reduce image requests -->
-        <div id="edwardLayout">
-            <svg id="edward" viewBox="0 0 1268 1044">
+
+        <div id="edLayout">
+            <!-- Using inline svg to reduce image requests -->
+            <svg viewBox="0 0 1268 1044">
                 <title>Edward from Cowboy Bebop</title>
                 <path
                     d="m994.96,20.33c.1.04.21.08.31.12-.11-.04-.22-.07-.32-.11,0,0,.01-.01.01-.01Z"
@@ -107,6 +101,7 @@
                 />
             </svg>
         </div>
+
         <header>
             <h1 class="screenReaderOnly">Brad Woods</h1>
             <img
@@ -116,60 +111,13 @@
                 src="images/bradWoods.png"
                 width="253"
             />
-            <p id="dropHead" class="textLarge bold">Front-end Engineer</p>
+            <p id="dropHead" class="textLarge bold">Front-end engineer</p>
         </header>
-        <main>
-            <p id="lead" class="textMed">
-                Rewilding the internet with creativity and story
-            </p>
-            <section id="projects">
-                <h2 class="textMed">Projects<span id="colon">:</span></h2>
-                <ul id="projects">
-                    <li>
-                        <a href="https://garden.bradwoods.io">
-                            <span class="textMed">Garden</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://feed.bradwoods.io">
-                            <span class="textMed">Feed</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://svg.bradwoods.io/lessons/viewbox">
-                            <span class="textMed">ViewBox</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://journal.bradwoods.io">
-                            <span class="textMed">Journal</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://garden.bradwoods.io/blueprints/js-engine/basic"
-                        >
-                            <span class="textMed">V8 Engine</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://layout.bradwoods.io">
-                            <span class="textMed">Layout Gen</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://git.bradwoods.io">
-                            <span class="textMed">Git Time</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://evac.bradwoods.io">
-                            <span class="textMed">Evac</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </main>
+
+        <p id="lead" class="textMed">
+            Rewilding the internet with creativity and story
+        </p>
+
         <footer>
             <ul>
                 <li>
@@ -185,7 +133,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.patreon.com/bradwoods">
+                    <a href="https://www.patreon.com/bradwoods" id="patreon">
                         <svg viewBox="0 0 24 24">
                             <title>Patreon</title>
                             <path
@@ -203,7 +151,7 @@
                     <a
                         href="mailto:brad@bradwoods.io?Subject=bradwoods.io - enquiry"
                     >
-                        <svg viewBox="0 0 24 24">
+                        <svg viewBox="0 0 24 24" id="email">
                             <title>Email</title>
                             <path
                                 d="m3.2,6H1v2.25h.01v9h-.01v6.75h22V6H3.2Zm17.8,5l-9,6L3,11v-3l9,6,9-6v3Z"
@@ -246,7 +194,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@bradwoods">
+                    <a href="https://www.youtube.com/@bradwoods" id="youTube">
                         <svg viewBox="0 0 24 24">
                             <title>YouTube</title>
                             <path
@@ -269,6 +217,11 @@
                 </li>
             </ul>
         </footer>
+
+        <a id="projects" href="/projects/">
+            <span class="textMed">Projects</span>
+        </a>
+
         <div id="vignette"></div>
         <div id="crt"></div>
     </body>

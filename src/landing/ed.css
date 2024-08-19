@@ -64,25 +64,54 @@
     }
 }
 
-#edwardLayout {
+#edLayout {
+    grid-row: 1 / -1;
+    grid-column: 1;
+
     width: 100%;
 
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(calc(-50% - 40px));
-    z-index: var(--z-index-edward);
+    position: relative;
     overflow: hidden;
+    z-index: var(--z-index-edward);
 
     pointer-events: none;
+
+    svg {
+        width: 100%;
+        min-width: 460px;
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+        translate: 0 -50%;
+
+        fill: var(--red-dark);
+
+        animation-name: flicker;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
 }
 
-#edwardLayout svg {
-    width: 40%;
+@media (max-width: 1000px) {
+    #edLayout {
+        grid-area: ed;
 
-    fill: var(--red-dark);
+        translate: 0 12px;
 
-    animation-name: flicker;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+        svg {
+            width: 360px;
+            min-width: unset;
+            scale: -1 1;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #edLayout {
+        svg {
+            right: unset;
+            left: 38%;
+        }
+    }
 }

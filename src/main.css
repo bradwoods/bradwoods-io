@@ -1,7 +1,0 @@
-main {
-    margin-top: 16px;
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-y);
-}

@@ -8,22 +8,13 @@
     --blue-light: hsl(210, 2%, 16%);
     --blue-dark: hsl(240, 3%, 6%);
 
-    --color-text-dark: var(--white-dark);
-    --color-text-med: var(--white-med);
-    --color-text-med-hover: var(--white-light);
-    --color-text-light: var(--white-light);
-    --color-text-light-hover: var(--red-med);
-
-    --color-line: var(--white-light);
     --color-focus: var(--white-light);
 
     --color-gradient-center: var(--blue-light);
     --color-gradient-outer: var(--blue-dark);
 
-    --height-line: 64px;
-
-    --gap-x: 32px;
-    --gap-y: 20px;
+    --gap-row: 16px;
+    --gap-col: 24px;
 
     --z-index-line: -1;
     --z-index-edward: 1;

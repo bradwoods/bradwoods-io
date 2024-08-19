@@ -14,7 +14,7 @@
 
 .textLarge::after {
     content: "";
-    margin-top: -0.2013em;
+    margin-top: -0.1213em;
     display: table;
 }
 

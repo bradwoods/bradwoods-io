@@ -1,0 +1,61 @@
+body {
+    min-height: 100%;
+
+    padding-bottom: var(--gap-col);
+    display: grid;
+    /* Using rows for gaps because size varies */
+    /* prettier-ignore */
+    grid:
+        ".          .               "   50vh
+        "line       line            "   var(--gap-row)
+        "line       line            "   auto
+        "line       line            "   var(--gap-row)
+        ".          .               "   var(--gap-row)
+        ".          lead            "   auto
+        ".          .               "   var(--gap-row)
+        ".          footer          "   auto
+        ".          .               "   calc(var(--gap-row) * 2)
+        ".          projectsLink    "   auto
+        ".          .               "   1fr
+        / 1fr       67%;
+    gap: 0 var(--gap-col);
+    justify-items: start;
+
+    font-family: "Courier", monospace;
+    color: var(--white-med);
+
+    background-image: radial-gradient(
+        ellipse at 60% 60%,
+        var(--color-gradient-center) 0%,
+        var(--color-gradient-outer) 65%
+    );
+    background-attachment: fixed;
+    overscroll-behavior: none;
+}
+
+@media (max-width: 1000px) {
+    body {
+        --gap-row: 24px;
+
+        grid:
+            ".      ed              ed  " 50vh
+            "line   line            line" var(--gap-row)
+            "line   line            line" auto
+            "line   line            line" var(--gap-row)
+            ".      .               .   " var(--gap-row)
+            ".      lead            .   " auto
+            ".      .               .   " var(--gap-row)
+            ".      footer          .   " auto
+            ".      .               .   " calc(var(--gap-row) * 2)
+            ".      projectsLink    .   " auto
+            ".      .               .   " 1fr
+            / var(--gap-col) 1fr var(--gap-col);
+        gap: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 128px;
+    }
+}

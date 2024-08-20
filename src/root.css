@@ -16,7 +16,7 @@
     --gap-row: 16px;
     --gap-col: 24px;
 
-    --z-index-line: -1;
+    --z-index-background: -1;
     --z-index-edward: 1;
     --z-index-vignette: 2;
     --z-index-crt-effect: 3;

@@ -10,6 +10,7 @@ a#projects {
     letter-spacing: 0.15em;
     color: var(--white-light);
     border: 1px solid currentColor;
+    transition: var(--transition);
 }
 
 a#projects:hover {

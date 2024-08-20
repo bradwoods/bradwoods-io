@@ -3,7 +3,5 @@
 
     width: 100%;
 
-    z-index: var(--z-index-line);
-
     background: var(--white-light);
 }

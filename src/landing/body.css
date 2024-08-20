@@ -1,6 +1,8 @@
 body {
     min-height: 100%;
 
+    position: relative;
+
     padding-bottom: var(--gap-col);
     display: grid;
     /* Using rows for gaps because size varies */
@@ -23,14 +25,6 @@ body {
 
     font-family: "Courier", monospace;
     color: var(--white-med);
-
-    background-image: radial-gradient(
-        ellipse at 60% 60%,
-        var(--color-gradient-center) 0%,
-        var(--color-gradient-outer) 65%
-    );
-    background-attachment: fixed;
-    overscroll-behavior: none;
 }
 
 @media (max-width: 1000px) {

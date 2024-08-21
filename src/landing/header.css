@@ -7,6 +7,10 @@ header {
     gap: 16px var(--gap-col);
     flex-wrap: wrap;
 
+    img {
+        translate: 0 2px;
+    }
+
     p#dropHead {
         color: var(--color-gradient-center);
     }

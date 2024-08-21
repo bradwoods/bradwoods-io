@@ -14,10 +14,18 @@
 html {
     height: 100%;
 
+    font-family: "Courier", monospace;
     font-size: calc(100% / 16 * 10);
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+
+    color: var(--white-med);
+    background: var(--color-gradient-outer);
+}
+
+body {
+    overscroll-behavior-y: none;
 }
 
 h1,

@@ -24,5 +24,7 @@
 
     --opacity-hover-sybling: 0.5;
 
-    --transition: all 80ms linear;
+    --letter-spacing: 0.15em;
+
+    --transition: all 140ms linear;
 }

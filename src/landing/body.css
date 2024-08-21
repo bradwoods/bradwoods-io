@@ -22,12 +22,9 @@ body {
         / 1fr       67%;
     gap: 0 var(--gap-col);
     justify-items: start;
-
-    font-family: "Courier", monospace;
-    color: var(--white-med);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     body {
         --gap-row: 24px;
 

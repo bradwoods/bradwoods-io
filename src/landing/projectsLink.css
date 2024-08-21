@@ -7,7 +7,7 @@ a#projects {
     padding: 8px 20px;
 
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: var(--letter-spacing);
     color: var(--white-light);
     border: 1px solid currentColor;
     transition: var(--transition);

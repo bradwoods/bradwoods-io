@@ -28,3 +28,9 @@
 
     --transition: all 140ms linear;
 }
+
+@media (max-width: 900px) {
+    :root {
+        --gap-col: 32px;
+    }
+}

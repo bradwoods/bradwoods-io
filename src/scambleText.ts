@@ -1,3 +1,5 @@
+// reference: https://www.youtube.com/watch?v=W5oawMJaXbU
+
 // These chars caused problem so replaced
 // const japaneseKatakanaChars =
 //     "ア イ ウ エ オ カ キ ク ケ コ サ シ ス セ ソ タ チ ツ テ ト ナ ニ ヌ ネ ハ ヒ フ ヘ ホ マ ミ ム メ モ ヤ ユ ヨ ラ リ ル レ ロ ワ ヲ ン";
@@ -9,16 +11,21 @@ const numbers = "0123456789";
 const misc = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 const matrixRainChars = [japaneseChars, latinChars, numbers, misc].join("");
 
+const config = {
+    chars: matrixRainChars,
+    charChangeSpeedMS: 20,
+    // How much animation time is added to each following letter
+    durationIncrement: 0.3,
+};
+
 export function getRandomInt({ min, max }: { min: number; max: number }) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function getRandomChar() {
     const i = getRandomInt({ min: 0, max: matrixRainChars.length - 1 });
-    return matrixRainChars[i];
+    return config.chars[i];
 }
-
-const SPEED_MS = 20;
 
 const dropHead: HTMLParagraphElement | null =
     document.querySelector("#dropHead");
@@ -41,10 +48,12 @@ function scrambleText(element: HTMLElement) {
             })
             .join("");
 
-        if (iterations >= originalText.length) clearInterval(interval);
+        if (iterations >= originalText.length) {
+            clearInterval(interval);
+        }
 
-        iterations += 1 / 3;
-    }, SPEED_MS);
+        iterations += config.durationIncrement;
+    }, config.charChangeSpeedMS);
 }
 
 if (dropHead && lead) {

@@ -1,7 +1,24 @@
-// https://www.youtube.com/watch?v=W5oawMJaXbU
+// These chars caused problem so replaced
+// const japaneseKatakanaChars =
+//     "ア イ ウ エ オ カ キ ク ケ コ サ シ ス セ ソ タ チ ツ テ ト ナ ニ ヌ ネ ハ ヒ フ ヘ ホ マ ミ ム メ モ ヤ ユ ヨ ラ リ ル レ ロ ワ ヲ ン";
+const japaneseChars =
+    "｢｣ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
+// Lower case looks better
+const latinChars = "abcdefghijklmnopqrstuvwxyz";
+const numbers = "0123456789";
+const misc = "!\"#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+const matrixRainChars = [japaneseChars, latinChars, numbers, misc].join("");
+
+export function getRandomInt({ min, max }: { min: number; max: number }) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function getRandomChar() {
+    const i = getRandomInt({ min: 0, max: matrixRainChars.length - 1 });
+    return matrixRainChars[i];
+}
 
 const SPEED_MS = 20;
-const LETTERS = "abcdefghijklmnopqrstuvwxyz";
 
 const dropHead: HTMLParagraphElement | null =
     document.querySelector("#dropHead");
@@ -20,7 +37,7 @@ function scrambleText(element: HTMLElement) {
                     return originalText[i];
                 }
 
-                return LETTERS[Math.floor(Math.random() * 26)];
+                return getRandomChar();
             })
             .join("");
 

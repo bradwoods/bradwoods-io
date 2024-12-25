@@ -3,7 +3,7 @@
 
 .textLarge {
     font-size: 1.9rem;
-    line-height: 1.8rem;
+    line-height: 1.056;
 }
 
 .textLarge::before {
@@ -20,7 +20,7 @@
 
 .textMed {
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 1.5;
 }
 
 .textMed::before {

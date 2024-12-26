@@ -1,0 +1,36 @@
+button#projects {
+    grid-area: projectsLink;
+
+    position: relative;
+    z-index: var(--z-index-infront-of-crt-effect);
+
+    padding: 8px 20px;
+
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+    color: var(--white-light);
+    border: 1px solid currentColor;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition-property: color, background, border-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--ease);
+
+    &:hover {
+        color: var(--color-gradient-center);
+        background: var(--white-light);
+    }
+
+    &:focus-visible {
+        outline: 1px solid var(--color-focus);
+    }
+}
+
+body[data-state="projects"] button#projects {
+    background: transparent;
+    border-color: transparent;
+    color: var(--white-med);
+    outline-color: transparent;
+    cursor: unset;
+}

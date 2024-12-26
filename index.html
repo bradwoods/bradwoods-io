@@ -37,10 +37,16 @@
         <link href="/src/lead.css" rel="stylesheet" />
         <link href="/src/header.css" rel="stylesheet" />
         <link href="/src/footer.css" rel="stylesheet" />
-        <link href="/src/projectsLink.css" rel="stylesheet" />
 
         <script type="module" src="/src/scambleText.ts" defer></script>
         <script type="module" src="/src/consoleLog.ts" defer></script>
+
+        <link href="/src/projectsButton/projectsButton.css" rel="stylesheet" />
+        <script
+            type="module"
+            src="/src/projectsButton/projectsButton.ts"
+            defer
+        ></script>
 
         <link rel="canonical" href="https://bradwoods.io" />
         <link rel="manifest" href="manifest.json" />
@@ -67,7 +73,7 @@
         <meta name="twitter:image" content="https://bradwoods.io/ogImage.jpg" />
         <meta name="twitter:image:alt" content="Edward from Cowboy Bebop" />
     </head>
-    <body>
+    <body data-state="initial">
         <div id="line"></div>
 
         <div id="edLayout">
@@ -234,9 +240,9 @@
             </ul>
         </footer>
 
-        <a id="projects" href="/projects/">
+        <button id="projects" type="button">
             <span class="textMed">Projects</span>
-        </a>
+        </button>
 
         <div id="background"></div>
         <div id="vignette"></div>

@@ -46,3 +46,11 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+button,
+button:disabled {
+    font: inherit;
+    border: none;
+    border-radius: 0;
+    background: none;
+}

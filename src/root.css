@@ -24,9 +24,11 @@
 
     --opacity-hover-sybling: 0.5;
 
-    --letter-spacing: 0.15em;
+    --letter-spacing: 0.4em;
 
-    --transition: all 140ms linear;
+    --duration: 140ms;
+    --ease: linear;
+    --transition: all var(--duration) var(--ease);
 }
 
 @media (max-width: 900px) {

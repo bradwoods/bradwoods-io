@@ -17,11 +17,15 @@ body {
         ".          .               "   var(--gap-row)
         ".          footer          "   auto
         ".          .               "   calc(var(--gap-row) * 2)
-        ".          projectsLink    "   auto
+        ".          projects        "   auto
         ".          .               "   1fr
         / 1fr       67%;
     gap: 0 var(--gap-col);
     justify-items: start;
+
+    &[data-state="projects"] {
+        padding-bottom: 50vh;
+    }
 }
 
 @media (max-width: 900px) {
@@ -38,7 +42,7 @@ body {
             ".      .               .   " var(--gap-row)
             ".      footer          .   " auto
             ".      .               .   " calc(var(--gap-row) * 2)
-            ".      projectsLink    .   " auto
+            ".      projects        .   " auto
             ".      .               .   " 1fr
             / var(--gap-col) 1fr var(--gap-col);
         gap: 0;

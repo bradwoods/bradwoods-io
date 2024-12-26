@@ -31,7 +31,7 @@ const dropHead: HTMLParagraphElement | null =
     document.querySelector("#dropHead");
 const lead: HTMLParagraphElement | null = document.querySelector("#lead");
 
-function scrambleText(element: HTMLElement) {
+export function scrambleText(element: HTMLElement) {
     const originalText = element.innerText;
 
     let iterations = 0;
@@ -60,5 +60,3 @@ if (dropHead && lead) {
     scrambleText(dropHead);
     scrambleText(lead);
 }
-
-export {};

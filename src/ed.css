@@ -81,7 +81,7 @@
         min-width: 460px;
 
         position: absolute;
-        top: 50%;
+        top: 45vh;
         right: 0;
         translate: 0 -50%;
 
@@ -103,6 +103,8 @@
             width: 360px;
             min-width: unset;
             scale: -1 1;
+
+            top: 50%;
         }
     }
 }

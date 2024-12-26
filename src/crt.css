@@ -71,7 +71,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: var(--z-index-crt-effect);
+    z-index: var(--z-index-crt);
 
     background: linear-gradient(
             rgba(18, 16, 16, 0) 50%,
@@ -95,7 +95,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: var(--z-index-crt-effect);
+    z-index: var(--z-index-crt);
 
     background: rgba(18, 16, 16, 0.1);
     pointer-events: none;

@@ -1,5 +1,5 @@
 p#lead {
     grid-area: lead;
 
-    z-index: var(--z-index-infront-of-crt-effect);
+    z-index: var(--z-index-infront-of-crt);
 }

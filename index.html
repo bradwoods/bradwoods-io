@@ -41,10 +41,12 @@
         <script type="module" src="/src/scambleText.ts" defer></script>
         <script type="module" src="/src/consoleLog.ts" defer></script>
 
-        <link href="/src/projectsButton/projectsButton.css" rel="stylesheet" />
+        <!-- PROJECTS ------------------------------------------------>
+        <link href="/src/projects/projects.css" rel="stylesheet" />
+        <link href="/src/projects/projectsButton.css" rel="stylesheet" />
         <script
             type="module"
-            src="/src/projectsButton/projectsButton.ts"
+            src="/src/projects/projectsButton.ts"
             defer
         ></script>
 
@@ -240,9 +242,81 @@
             </ul>
         </footer>
 
-        <button id="projects" type="button">
-            <span class="textMed">Projects</span>
-        </button>
+        <section class="projects">
+            <h2 class="screenReaderOnly">Projects</h2>
+            <button type="button" aria-label="Show projects">
+                <span class="textMed">Projects</span>
+            </button>
+
+            <ul>
+                <li>
+                    <a href="https://garden.bradwoods.io" target="_blank">
+                        <span class="textMed">Garden</span>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://svg.bradwoods.io/lessons/viewbox"
+                        target="_blank"
+                    >
+                        <span class="textMed">ViewBox</span>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://garden.bradwoods.io/experiments/pop-culture"
+                        target="_blank"
+                    >
+                        <span class="textMed">POP culture</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://journal.bradwoods.io" target="_blank">
+                        <span class="textMed">Journal</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://layout.bradwoods.io" target="_blank">
+                        <span class="textMed">Layout Generator</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://7guis.bradwoods.io" target="_blank">
+                        <span class="textMed">7 GUIs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://git.bradwoods.io" target="_blank">
+                        <span class="textMed">Git Time</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://garden.bradwoods.io/blueprints/js-engine/basic"
+                        target="_blank"
+                    >
+                        <span class="textMed">V8 Engine</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://evac.bradwoods.io" target="_blank">
+                        <span class="textMed">XState Evac</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://feed.bradwoods.io" target="_blank">
+                        <span class="textMed">Feed</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://icarus.bradwoods.io" target="_blank">
+                        <span class="textMed">Apollo GraphQL</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
         <div id="background"></div>
         <div id="vignette"></div>

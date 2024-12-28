@@ -3,7 +3,7 @@ section.projects {
 
     display: flex;
     flex-direction: column;
-    gap: var(--gap-row);
+    gap: calc(var(--gap-row) * 0.5);
     align-items: flex-start;
 
     & ul {
@@ -19,12 +19,22 @@ section.projects {
             display: flex;
 
             & a {
+                position: relative;
+
                 /* To reach a11y minimum click/tap target height */
                 padding: 3px 0;
 
                 text-decoration: underline;
                 color: var(--white-light);
                 transition: var(--transition);
+
+                &:focus-visible::after {
+                    content: "";
+
+                    position: absolute;
+                    inset: 0 -16px;
+                    outline: 1px solid var(--color-focus);
+                }
             }
         }
     }

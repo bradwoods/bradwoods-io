@@ -16,7 +16,7 @@ body {
         ".          lead            "   auto
         ".          .               "   var(--gap-row)
         ".          footer          "   auto
-        ".          .               "   calc(var(--gap-row) * 2)
+        ".          .               "   calc(var(--gap-row) * 1.5)
         ".          projects        "   auto
         ".          .               "   1fr
         / 1fr       67%;
@@ -41,7 +41,7 @@ body {
             ".      lead            .   " auto
             ".      .               .   " var(--gap-row)
             ".      footer          .   " auto
-            ".      .               .   " calc(var(--gap-row) * 2)
+            ".      .               .   " calc(var(--gap-row) * 1.5)
             ".      projects        .   " auto
             ".      .               .   " 1fr
             / var(--gap-col) 1fr var(--gap-col);

@@ -33,6 +33,10 @@ h2 {
     font-weight: 400;
 }
 
+p {
+    text-wrap: pretty;
+}
+
 img,
 svg {
     display: block;

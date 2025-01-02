@@ -4,14 +4,6 @@
 
 ## Quick Start:
 
-1. Install Dependencies
-
 ```
-npm install
-```
-
-2. Start Dev. Server
-
-```
-npm run dev
+npm install && npm run dev
 ```

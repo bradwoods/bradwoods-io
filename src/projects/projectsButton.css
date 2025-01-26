@@ -2,7 +2,7 @@ section.projects button {
     grid-area: projectsLink;
 
     position: relative;
-    z-index: var(--z-index-infront-of-crt);
+    z-index: var(--z-index-above-crt);
 
     padding: 8px var(--padding-projects-button);
 

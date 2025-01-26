@@ -2,7 +2,7 @@ footer {
     grid-area: footer;
 
     position: relative;
-    z-index: var(--z-index-infront-of-crt);
+    z-index: var(--z-index-above-crt);
 
     & ul {
         display: flex;

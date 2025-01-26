@@ -2,7 +2,7 @@ section.projects {
     grid-area: projects;
 
     position: relative;
-    z-index: var(--z-index-infront-of-crt);
+    z-index: var(--z-index-above-crt);
 
     display: flex;
     flex-direction: column;

@@ -1,6 +1,9 @@
 section.projects {
     grid-area: projects;
 
+    position: relative;
+    z-index: var(--z-index-infront-of-crt);
+
     display: flex;
     flex-direction: column;
     gap: calc(var(--gap-row) * 0.5);
@@ -46,9 +49,6 @@ body[data-state="projects"] section.projects ul {
 
 @media (max-width: 600px) {
     section.projects {
-        position: relative;
-        z-index: var(--z-index-infront-of-crt);
-
         gap: unset;
     }
 

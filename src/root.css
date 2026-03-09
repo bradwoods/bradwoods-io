@@ -33,7 +33,7 @@
     --transition: all var(--duration) var(--ease);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
     :root {
         --gap-col: 32px;
     }

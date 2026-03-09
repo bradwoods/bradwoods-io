@@ -1,38 +1,20 @@
 /* https://typescale.com/ - Minor Third */
-/* https://seek-oss.github.io/capsize/ */
+
+.textLarge,
+.textMed {
+    /* Trim empty space above ascenders and below baseline */
+    text-box-edge: cap alphabetic;
+    text-box-trim: trim-both;
+}
 
 .textLarge {
     font-size: 1.9rem;
     line-height: 1.056;
 }
 
-.textLarge::before {
-    content: "";
-    margin-bottom: -0.1622em;
-    display: table;
-}
-
-.textLarge::after {
-    content: "";
-    margin-top: -0.1213em;
-    display: table;
-}
-
 .textMed {
     font-size: 1.6rem;
     line-height: 1.5;
-}
-
-.textMed::before {
-    content: "";
-    margin-bottom: -0.1709em;
-    display: table;
-}
-
-.textMed::after {
-    content: "";
-    margin-top: -0.21em;
-    display: table;
 }
 
 .bold {

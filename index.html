@@ -44,6 +44,8 @@
         <!-- PROJECTS ------------------------------------------------>
         <link href="/src/projects/projects.css" rel="stylesheet" />
         <link href="/src/projects/projectsButton.css" rel="stylesheet" />
+        <link href="/src/projects/glitchText.css" rel="stylesheet" />
+        <link href="/src/projects/glitchBorder.css" rel="stylesheet" />
         <script type="module" src="/src/projects/projectsButton.ts"></script>
 
         <link rel="canonical" href="https://bradwoods.io" />
@@ -246,8 +248,14 @@
 
         <section class="projects">
             <h2 class="screenReaderOnly">Projects</h2>
-            <button type="button" aria-label="Show projects">
-                <span class="textMed">Projects</span>
+            <button
+                type="button"
+                aria-label="Show projects"
+                class="glitchBorder"
+            >
+                <span class="textMed glitchText" data-text="Projects"
+                    >Projects</span
+                >
             </button>
 
             <ul>

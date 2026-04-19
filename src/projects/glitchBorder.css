@@ -1,0 +1,72 @@
+[data-state="initial"] {
+    .glitchBorder::before,
+    .glitchBorder::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border: 1px solid;
+        pointer-events: none;
+        mix-blend-mode: screen;
+    }
+
+    .glitchBorder::before {
+        border-color: #f00;
+        animation: borderGlitchRed 2.5s infinite;
+        z-index: 1;
+    }
+
+    .glitchBorder::after {
+        border-color: #0ff;
+        animation: borderGlitchBlue 2.5s infinite;
+        z-index: 2;
+    }
+
+    .glitchBorder:hover::before,
+    .glitchBorder:hover::after {
+        opacity: 0;
+    }
+}
+
+@keyframes borderGlitchRed {
+    0%,
+    70% {
+        transform: translate(0);
+    }
+    75% {
+        transform: translate(-2px, 1px);
+    }
+    80% {
+        transform: translate(-3px, -1px);
+    }
+    85% {
+        transform: translate(2px, 1px);
+    }
+    90% {
+        transform: translate(-1px, 1px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes borderGlitchBlue {
+    0%,
+    70% {
+        transform: translate(0);
+    }
+    75% {
+        transform: translate(2px, -1px);
+    }
+    80% {
+        transform: translate(3px, 1px);
+    }
+    85% {
+        transform: translate(-2px, -1px);
+    }
+    90% {
+        transform: translate(1px, -1px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

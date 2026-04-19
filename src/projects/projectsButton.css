@@ -10,7 +10,6 @@ section.projects button {
     letter-spacing: var(--letter-spacing);
     color: var(--white-light);
     border: 1px solid currentColor;
-    font-weight: 700;
     cursor: pointer;
 
     transition-property: color, background, border-color;
